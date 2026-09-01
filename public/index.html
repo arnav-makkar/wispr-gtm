@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wispr India GTM · APERTURE</title>
+<meta name="description" content="APERTURE: the machine that prices Wispr India's real growth channels, and one profession (law) taken end to end.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="author" content="Arnav Makkar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wispr India GTM · APERTURE">
+<meta property="og:description" content="A machine that prices every growth channel in India, and one profession taken end to end.">
+<meta property="og:image" content="/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wispr India GTM · APERTURE">
+<meta name="twitter:description" content="A machine that prices every growth channel in India, and one profession taken end to end.">
+<meta name="twitter:image" content="/preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B5FBF'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23FAF6EC' stroke-width='2.2'/%3E%3Cpath d='M16 7.5v17' stroke='%23FAF6EC' stroke-width='2.2'/%3E%3Cpath d='M16 7.5a8.5 8.5 0 0 1 0 17z' fill='%23FAF6EC'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<script>
+(function(){try{var m=localStorage.getItem("theme");
+if(m==="light"||m==="dark")document.documentElement.setAttribute("data-theme",m);}catch(e){}})();</script>
+<style>
+:root{
+  --bg:#FAF6EC; --surface:#F4EFE2; --surface-2:#ECE6D6;
+  --ink:#2E2C28; --ink-2:#5C574F; --ink-3:#6B6559;
+  --line:rgba(62,56,42,.12); --line-2:rgba(62,56,42,.22);
+  --accent:#5B5FBF; --accent-soft:rgba(91,95,191,.10);
+  --gain:#2E7D5B; --gain-soft:rgba(46,125,91,.11);
+  --loss:#A64444; --loss-soft:rgba(166,68,68,.10);
+  --hold:#96762C; --hold-soft:rgba(150,118,44,.12);
+  --sans:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;
+  --r:10px; --r-lg:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#191817; --surface:#201F1D; --surface-2:#2A2825;
+  --ink:#E9E6E1; --ink-2:#B4AEA4; --ink-3:#A29B8F;
+  --line:rgba(233,230,225,.11); --line-2:rgba(233,230,225,.20);
+  --accent:#AFB2F5; --accent-soft:rgba(175,178,245,.15);
+  --gain:#6FBF95; --gain-soft:rgba(111,191,149,.14);
+  --loss:#DE8888; --loss-soft:rgba(222,136,136,.13);
+  --hold:#D2AC59; --hold-soft:rgba(210,172,89,.14);
+}}
+[data-theme="dark"]{
+  --bg:#191817; --surface:#201F1D; --surface-2:#2A2825;
+  --ink:#E9E6E1; --ink-2:#B4AEA4; --ink-3:#A29B8F;
+  --line:rgba(233,230,225,.11); --line-2:rgba(233,230,225,.20);
+  --accent:#AFB2F5; --accent-soft:rgba(175,178,245,.15);
+  --gain:#6FBF95; --gain-soft:rgba(111,191,149,.14);
+  --loss:#DE8888; --loss-soft:rgba(222,136,136,.13);
+  --hold:#D2AC59; --hold-soft:rgba(210,172,89,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);
+  font:400 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+.shell{max-width:920px;margin:0 auto;padding:0 26px;min-width:0}
+a{color:var(--accent);text-underline-offset:3px}
+::selection{background:var(--accent-soft)}
+
+/* top bar */
+.navwrap{position:sticky;top:0;z-index:60;background:var(--bg);border-bottom:1px solid var(--line);padding:0 20px;backdrop-filter:saturate(1.2) blur(6px);transition:box-shadow .2s ease}
+.navwrap.stuck{box-shadow:0 6px 20px -12px rgba(0,0,0,.45)}
+html{scroll-padding-top:56px}
+.navpos{}  /* do not set position here: it overrides .navwrap sticky */
+.topnav{display:flex;align-items:center;justify-content:center;gap:2px;flex-wrap:wrap;padding-right:40px}
+.topnav .brand{font:600 12px var(--mono);letter-spacing:.13em;color:var(--ink);padding:12px 12px 12px 0;white-space:nowrap;text-transform:uppercase}
+.topnav .brand em{font-style:normal;color:var(--accent)}
+.topnav a{font-size:13.5px;color:var(--ink-3);text-decoration:none;padding:12px 10px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .12s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.themebtn{position:absolute;right:12px;top:2px;width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink-2);cursor:pointer;display:grid;place-items:center}
+.themebtn svg{width:17px;height:17px}
+
+/* full-viewport acts */
+.act{min-height:88svh;display:flex;flex-direction:column;justify-content:center;padding:76px 0}
+.act.tall{min-height:96svh}
+.kick{font:600 12px var(--mono);letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin:0 0 12px}
+h1{font:700 clamp(32px,5vw,50px)/1.12 var(--sans);letter-spacing:-.015em;margin:0 0 14px}
+h2{font:700 clamp(26px,3.8vw,38px)/1.16 var(--sans);letter-spacing:-.012em;margin:0 0 10px}
+h3{font:600 17px/1.35 var(--sans);margin:26px 0 8px}
+p{margin:9px 0;color:var(--ink-2);max-width:68ch}
+p b,li b{color:var(--ink)}
+.lead{font-size:19px;color:var(--ink);max-width:62ch}
+.dim{color:var(--ink-3);font-size:13px}
+
+/* stat rows */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stat .v{font:600 26px var(--mono);color:var(--ink);letter-spacing:-.01em}
+.stat .v.acc{color:var(--accent)}
+.stat .v.bad{color:var(--loss)}
+.stat .l{font-size:13px;color:var(--ink-3);margin-top:4px;line-height:1.45}
+
+/* tables */
+.xscroll{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th{font:600 11.5px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink);text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-2)}
+td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.n{font-family:var(--mono);color:var(--ink);white-space:nowrap}
+td.g{color:var(--gain);font-family:var(--mono);white-space:nowrap}
+.rowlab{font:600 12.5px var(--mono);color:var(--ink);white-space:nowrap}
+
+/* callouts */
+.fine{color:var(--ink-3);font-size:13.5px;line-height:1.6;margin:16px 0;max-width:74ch}
+.fine b{color:var(--ink-2)}
+
+/* radial */
+svg.radial{width:min(94vw,86svh,960px);height:auto;display:block;margin:6px auto 0}
+.spin{transform-origin:400px 400px;animation:spin 46s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.spin{animation:none}}
+.spokes line{stroke:var(--accent);stroke-width:1.1;opacity:.55;stroke-dasharray:3 6}
+.legend{text-align:center;color:var(--ink-3);font-size:13.5px;margin:8px auto 0;max-width:60ch}
+.bigline{font:700 clamp(28px,4.4vw,42px)/1.15 var(--sans);letter-spacing:-.012em;text-align:left}
+.bigline .a{color:var(--accent)}
+.centerp{text-align:center;margin:6px auto;max-width:70ch}
+
+/* sim panel */
+.panel{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:16px 16px 12px;margin:18px 0}
+.phead{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.ptitle{font:600 12.5px var(--mono);letter-spacing:.06em;color:var(--ink-2)}
+.ctrl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.ctrl button{font:600 12.5px var(--mono);background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line-2);border-radius:8px;padding:6px 11px;cursor:pointer}
+.ctrl button.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.knobs{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;margin:0 0 12px;padding-bottom:12px;border-bottom:1px dashed var(--line-2)}
+.knob{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.knobs .kl{font:500 12px var(--mono);color:var(--ink-3);letter-spacing:.04em}
+.tog{font:500 12px var(--mono);color:var(--ink-3);display:flex;gap:5px;align-items:center;cursor:pointer}
+.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:6px 0 10px}
+.ss{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:8px 11px}
+.ss .l{font-size:11px;color:var(--ink-3)}
+.ss .v{font:600 20px var(--mono);color:var(--ink)}
+.ss .v.acc{color:var(--accent)}
+.ss .u{font-size:11px;color:var(--ink-3)}
+#chart{width:100%;height:auto;display:block;border-radius:8px}
+.alloc-strip{display:flex;align-items:flex-end;gap:2px;height:52px;margin:10px 0 2px}
+.alloc-strip .bar{flex:1;background:var(--line-2);border-radius:2px 2px 0 0;min-height:3px;transition:height .25s}
+.alloc-strip .bar.hot{background:var(--accent)}
+.tape{font:500 12px var(--mono);color:var(--ink-2);display:flex;flex-wrap:wrap;gap:12px;padding-top:8px;border-top:1px dashed var(--line-2);min-height:20px}
+.tape .k.s{color:var(--gain);font-weight:600}
+.tape .k.x{color:var(--loss);font-weight:600}
+.leg{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+
+/* plain 3-row logic list */
+.logic{display:grid;gap:12px;margin:20px 0}
+.logic .row{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:15px 18px 16px;display:block}
+.logic .row .no{display:block;font:700 13.5px var(--mono);color:var(--accent);letter-spacing:.13em;margin:0 0 9px}
+.logic .row .tx{display:block;color:var(--ink-2);font-size:16px}
+.logic .row .tx b{color:var(--ink)}
+
+footer{padding:30px 0 60px;color:var(--ink-3);font:500 12px var(--mono);letter-spacing:.08em;text-align:center}
+@media (max-width:640px){
+  .act{min-height:0;padding:56px 0}
+}
+
+/* blueprint */
+.bpwide{width:min(1300px,95vw);position:relative;left:50%;transform:translateX(-50%);margin:6px 0 0}
+.bpscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:2px 0 6px}
+svg#bp{width:100%;min-width:860px;height:auto;display:block;margin:0 auto;overflow:visible}
+
+.band{fill:var(--surface);opacity:.34;stroke:none}
+.bandlab{font:700 12px var(--mono);letter-spacing:.18em;fill:var(--ink);text-anchor:end;opacity:1}
+.rail{fill:none;stroke-width:1.6;stroke-dasharray:1 6;stroke-linecap:round;opacity:.7}
+.rail.out{stroke:var(--accent)}
+.rail.ev{stroke:var(--gain)}
+.raillab{font:600 9px var(--mono);letter-spacing:.18em;opacity:.75}
+.raillab.out{fill:var(--accent)}
+.raillab.ev{fill:var(--gain)}
+
+.dedge{fill:none;stroke:var(--accent);stroke-width:1.2;opacity:.34;transition:opacity .22s ease,stroke .22s ease,stroke-width .22s ease}
+.dedge.eviden{stroke:var(--gain);opacity:.32}
+.dedge.gov{stroke:var(--ink-3);opacity:.45;stroke-dasharray:4 4}
+.dedge.ret{stroke:var(--accent);opacity:.26;stroke-dasharray:6 7}
+.dedge.boost{stroke:var(--accent);opacity:.5;stroke-dasharray:2 4;stroke-width:1.4}
+
+.dnode{cursor:pointer;transform-box:fill-box;transform-origin:center;transition:opacity .22s ease,transform .18s cubic-bezier(.2,.7,.3,1)}
+.dnode rect{pointer-events:all;fill:var(--bg);stroke:var(--line-2);stroke-width:1.1;
+  transition:fill .18s ease,stroke .18s ease,stroke-width .18s ease}
+.dnode text{pointer-events:none;user-select:none}
+.nt{font:600 13.5px var(--mono);fill:var(--ink);letter-spacing:.04em;text-anchor:middle}
+.nt.sm{font-size:12px}
+.nt.hero{font:600 19px var(--mono);letter-spacing:.14em}
+.nt.bar{font:600 11.5px var(--mono);fill:var(--ink-2);letter-spacing:.05em}
+.ns{font:500 11px var(--mono);fill:var(--ink-3);text-anchor:middle}
+.ns.sm{font-size:10px}
+.nx{font:500 10px var(--mono);fill:var(--ink-2);text-anchor:middle;letter-spacing:.02em}
+.tag{font:500 9px var(--mono);fill:var(--ink-3);text-anchor:middle;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+
+/* three hues only: accent = money and the brain · gain = evidence · neutral = everything else */
+.fam-brain rect{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.6}
+.fam-brain .nt{fill:var(--accent)}
+.fam-human rect{fill:var(--bg);stroke:var(--ink-3);stroke-width:1.4}
+.fam-human .nt{fill:var(--ink)}
+.fam-lane rect{fill:var(--surface-2);stroke:var(--line-2)}
+.fam-audit rect{fill:var(--surface-2);stroke:var(--line-2);stroke-width:1.1;stroke-dasharray:5 4}
+.fam-audit .nt{fill:var(--ink-2)}
+.fam-open rect{fill:var(--bg);stroke:var(--line-2)}
+.fam-open .tag{fill:var(--accent);opacity:.85}
+.fam-wall rect{fill:var(--surface-2);stroke:var(--line-2);stroke-dasharray:5 4}
+.fam-wall .nt,.fam-wall .ns,.fam-wall .tag{fill:var(--ink-3)}
+.fam-evid rect{fill:var(--gain-soft);stroke:var(--gain);stroke-width:1.1}
+.fam-evid .nt{fill:var(--gain)}
+.fam-evid .tag{fill:var(--gain);opacity:.8}
+
+.dnode:hover{transform:translateY(-2px)}
+.dnode:hover rect{stroke-width:2}
+.dnode:focus-visible rect{stroke:var(--accent);stroke-width:2.4}
+.dnode:focus{outline:none}
+
+#bp.focus .dedge{opacity:.07}
+/* dim by de-saturating, never by transparency: cards must stay opaque so no edge bleeds through them */
+#bp.focus .dnode:not(.on) rect{fill:var(--bg);stroke:var(--line);stroke-width:1}
+#bp.focus .dnode:not(.on).fam-wall rect,#bp.focus .dnode:not(.on).bar rect{fill:var(--surface);stroke:var(--line)}
+#bp.focus .dnode .ns,#bp.focus .dnode .tag,#bp.focus .dnode .nx{opacity:.28}
+#bp.focus .dnode .nt{opacity:.6}
+#bp.focus .dnode.on rect{opacity:1;filter:url(#glow);stroke-width:2.1}
+#bp.focus .dnode.on .nt,#bp.focus .dnode.on .ns,
+#bp.focus .dnode.on .tag,#bp.focus .dnode.on .nx{opacity:1}
+#bp.focus .dnode:hover .nt{opacity:1}
+#bp.focus .dnode:hover rect{opacity:.75}
+#bp.focus .dedge.lit{opacity:1;stroke:var(--accent);stroke-width:2.3;stroke-dasharray:9 7;animation:bpflow 1.05s linear infinite}
+#bp.focus .dedge.lit.eviden{stroke:var(--gain)}
+#bp.focus .dedge.lit.gov{stroke:var(--hold)}
+#bp.focus .dedge.lit.boost{stroke:var(--accent);stroke-dasharray:5 5}
+@keyframes bpflow{to{stroke-dashoffset:-16}}
+@media (prefers-reduced-motion:reduce){#bp.focus .dedge.lit{animation:none;stroke-dasharray:none}.dnode:hover{transform:none}}
+.dnode.sel rect{stroke-width:2.6}
+.dnode.sel .nt{fill:var(--accent)}
+.dnode.sel.fam-evid .nt{fill:var(--gain)}
+.dnode.sel.fam-human .nt{fill:var(--hold)}
+
+#bptip{position:fixed;z-index:60;background:var(--surface);border:1px solid var(--line-2);border-radius:10px;
+  padding:9px 13px;font-size:13px;line-height:1.5;color:var(--ink-2);max-width:290px;pointer-events:none;
+  opacity:0;transform:translateY(3px);transition:opacity .13s ease,transform .13s ease;box-shadow:0 10px 34px rgba(0,0,0,.22)}
+#bptip.show{opacity:1;transform:translateY(0)}
+#bptip .tt{font:600 11px var(--mono);letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:3px}
+
+#bpd{padding:0;margin:18px 0 0;max-width:none;min-height:132px;position:relative}
+#bpd .t{font:600 13px var(--mono);letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+#bpd .b{color:var(--ink-2);font-size:15.5px;line-height:1.6;margin:8px 0 0;max-width:86ch}
+#bpd .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+#bpd .chip{font:500 11.5px var(--mono);color:var(--ink-3);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+#bpd .chip b{color:var(--ink-2);font-weight:600}
+#bpd .law{border-left:2px solid var(--accent);padding:2px 0 2px 13px;margin-top:14px;color:var(--ink);font-size:14.5px;line-height:1.55}
+#bpd .law b{color:var(--accent);font:600 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}
+#bpd .esc{position:absolute;top:0;right:0;font:500 11px var(--mono);color:var(--ink-3);opacity:0;transition:opacity .2s}
+#bpd.active .esc{opacity:1}
+
+.hint{font:500 12.5px var(--mono);color:var(--ink-3);text-align:left;margin:14px 0 2px;max-width:none}
+.hint b{color:var(--accent);font-weight:600}
+.bplegend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0 0;font:500 11.5px var(--mono);color:var(--ink-3)}
+.bplegend span{display:flex;align-items:center;gap:7px}
+.bplegend i{width:13px;height:13px;border-radius:4px;display:inline-block;flex:none}
+.bplegend i.hum{background:var(--hold-soft);border:1.5px solid var(--hold)}
+.bplegend i.mac{background:var(--accent-soft);border:1.5px solid var(--accent)}
+.bplegend i.wal{border:1.5px dashed var(--line-2)}
+.bplegend i.evi{background:var(--gain-soft);border:1.5px solid var(--gain)}
+.bplegend i.aud{border:1.5px dashed var(--loss)}
+.bplegend i.bst{width:20px;height:0;border-radius:0;border-top:2px dotted var(--accent)}
+
+/* two-column comparison cards */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px}
+.col.walls{border-top:3px solid var(--ink-3)}
+.col.open{border-top:3px solid var(--accent)}
+.col .t{font:600 12px var(--mono);letter-spacing:.13em;text-transform:uppercase;margin-bottom:8px;color:var(--accent)}
+.col.walls .t{color:var(--ink-3)}
+.col ul{margin:0;padding-left:16px}
+.col li{margin:7px 0;color:var(--ink-2);font-size:14.5px}
+/* pill strip */
+.loop{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+.loop .step{font:500 12.5px var(--mono);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink-2)}
+.loop .step b{color:var(--accent);font-weight:600}
+@media (max-width:640px){.duo{grid-template-columns:1fr}}
+
+/* drop-downs */
+details.tg{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2px 0;margin:22px 0;max-width:860px}
+details.tg + details.tg{margin-top:-23px;border-top:none}
+details.tg > summary{cursor:pointer;list-style:none;padding:13px 2px;font:600 12.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+details.tg > summary::-webkit-details-marker{display:none}
+details.tg > summary::before{content:"";width:0;height:0;flex-shrink:0;border-left:5px solid var(--ink-3);border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}
+details.tg[open] > summary::before{transform:rotate(90deg)}
+details.tg > summary:hover{color:var(--accent)}
+details.tg .bd{padding:4px 0 18px 20px}
+details.tg .bd > :first-child{margin-top:0}
+details.tg .bd > :last-child{margin-bottom:0}
+@media (max-width:640px){details.tg .bd{padding-left:8px}}
+
+/* statement + funnel bars */
+.bars{margin:28px 0;display:flex;flex-direction:column;gap:14px;max-width:860px}
+.bar-row{display:grid;grid-template-columns:200px 1fr 132px;gap:14px;align-items:center}
+@media(max-width:640px){.bar-row{grid-template-columns:1fr;gap:5px}.bar-row .fig{text-align:left}}
+.bar-row .nm{display:block;font-size:14px;color:var(--ink);font-weight:550}
+.bar-row .nm span{display:block;font-size:12px;color:var(--ink-3);font-weight:400}
+.bar-track{display:block;height:14px;background:var(--surface-2);border-radius:99px;overflow:hidden;min-width:0}
+.bar-fill{display:block;height:100%;border-radius:99px;background:var(--accent)}
+.bar-row .fig{display:block;font:600 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+
+details.tg > summary{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:13px 14px;margin:0 0 2px}
+details.tg > summary:hover{background:var(--accent-soft);border-color:var(--accent)}
+details.tg[open] > summary{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+details.tg > summary .cue{font:600 9.5px var(--mono);letter-spacing:.14em;color:var(--accent);
+  border:1px solid var(--accent);border-radius:99px;padding:3px 8px;margin-right:10px;flex-shrink:0;text-transform:uppercase}
+details.tg[open] > summary .cue::after{content:"ED"}
+details.tg{border:none;padding:0}
+details.tg + details.tg{margin-top:14px;border-top:none}
+
+.fine.wide{max-width:none}
+.panel .leg{max-width:none}
+details.tg .bd > .fine{max-width:none}
+
+.logic .tx b.big{display:block;font-size:20px;line-height:1.25;letter-spacing:-.01em;margin-bottom:5px;color:var(--ink)}
+.logic .tx b.big a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+/* firm flow chart */
+svg.fc{width:100%;min-width:720px;height:auto;display:block;margin:22px 0 0}
+.fcn rect{fill:var(--surface);stroke:var(--line-2);stroke-width:1.4}
+.fcn.on rect{stroke:var(--accent);stroke-width:1.8}
+.fcn.win rect{stroke:var(--gain);stroke-width:1.8}
+.fct{font:700 17px var(--mono);fill:var(--ink);letter-spacing:.06em;text-anchor:middle}
+.fcn.on .fct{fill:var(--accent)}
+.fcn.win .fct{fill:var(--gain)}
+.fcs{font:400 14px var(--sans);fill:var(--ink-3);text-anchor:middle}
+.fcl{font:600 12px var(--mono);fill:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
+.fck{font:600 13px var(--mono);fill:var(--ink-3);letter-spacing:.1em;text-anchor:middle}
+.fcx path{stroke:var(--ink-3);stroke-width:1.4;fill:none;marker-end:url(#fcar)}
+.inlink{color:var(--accent);font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--accent-soft)}
+.inlink:hover{text-decoration-color:var(--accent)}
+.linkout{display:inline-block;font:600 15px var(--mono);color:var(--accent);text-decoration:none;border:1px solid var(--accent-soft);border-radius:99px;padding:10px 18px}
+.linkout:hover{border-color:var(--accent);background:var(--surface)}
+.logic .tx b.big a:hover{border-bottom-color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="navwrap navpos">
+  <nav class="topnav" aria-label="Sections">
+    <span class="brand">WISPR INDIA GTM<em>_</em></span>
+    <a href="#s1">01 The thesis</a>
+    <a href="#s2">02 The machine</a>
+    <a href="#s3">03 The case study</a>
+  </nav>
+  <button class="themebtn" id="themebtn" title="Theme" aria-label="Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/></svg></button>
+</div>
+
+<div class="shell">
+
+<!-- 01a · thesis -->
+<section class="act" id="s1">
+  <p class="kick">01 · The thesis</p>
+  <h1>The rules of marketing<br>are changing. Fast.</h1>
+  <p class="lead">The next great marketing teams won't look like agencies. They'll operate like <b>boutique hedge funds</b>: everything they run gets a price, and money moves to what works. Daily.</p>
+</section>
+
+<!-- 01c · why india is different -->
+<section class="act">
+  <p class="kick">Why India is its own playbook</p>
+  <h2>India isn&rsquo;t a market.<br>It&rsquo;s a thousand markets.</h2>
+  <div class="xscroll"><table>
+    <tr><th></th><th>The US playbook</th><th>What India needs</th></tr>
+    <tr><td class="rowlab">B2C</td><td>One message, a few big campaigns; paid ads and SEO carry it.</td><td><b>Thousands of small campaigns in parallel</b>: 14 product-live Indian languages, creators, WhatsApp, festivals, streets, each audience priced on its own.</td></tr>
+    <tr><td class="rowlab">B2B</td><td>Cold email, sales-development sequences, top-down procurement.</td><td><b>Champion-led and warm</b>: much of the professional usage sits here, in global capability centres and services floors, while many budgets sit elsewhere. The buyer map is different, and the only way to know it is to measure it.</td></tr>
+  </table></div>
+  <p><b>The US concentrates; India fragments.</b> A playbook built for concentration cannot be imported. One built for fragmentation has to be engineered, and that is the machine below.</p>
+  <p class="fine" style="margin:26px 0 10px">Measured across every public Instagram collaboration since March, re-read on 1 September 2026:</p>
+  <div class="stats">
+    <div class="stat"><div class="v">14.7M</div><div class="l">creator views across 32 collaborations since March. Twelve of them are under two weeks old and still climbing.</div></div>
+    <div class="stat"><div class="v acc">110x</div><div class="l"><b>in views</b>, between the highest and lowest settled collaboration inside one follower tier. Thirteen creators, one fee band of roughly 3x: 38,259 views at one end, 4,218,136 at the other.</div></div>
+    <div class="stat"><div class="v">1 link</div><div class="l">one destination shared across all 32, so nobody can tell which of those views became installs.</div></div>
+  </div>
+  <details class="tg">
+    <summary><span class="cue">Open</span>All 32 Instagram collaborations, priced: per view, per like, per comment</summary>
+    <div class="bd">
+  <p class="fine" style="margin-bottom:10px"><b>Fee is a tier band, never a creator-specific number.</b> Published 2026 India rate cards: nano ₹8K to 25K · micro ₹15K to 50K · mid ₹50K to 150K · macro ₹200K to 500K. Everyone inside a tier carries the same band, so every ₹ column is a range, and three collaborations that were never booked as paid carry no fee.</p>
+  <p class="fine" style="margin-bottom:10px"><b>Age matters, so it is a column.</b> A reel keeps collecting views after it is posted, so a new one cannot be compared with an old one. Reading the same posts four days apart shows where that stops: under a week old they moved by 8 to 211 percent, and past fourteen days almost every one moved by less than one percent. So fourteen days is the settling line here. Rows marked <i>still settling</i> are younger than that, their views are still climbing, and the cost figures on those rows are ceilings that will fall. The headline spread uses settled rows only.</p>
+<div class="xscroll"><table>
+    <tr><th>Creator</th><th>Tier</th><th>Age</th><th>Followers</th><th>Views</th><th>Likes</th><th>Comments</th><th>₹ / 1,000 views</th><th>₹ / like</th><th>₹ / comment</th></tr>
+    <tr><td class="rowlab">@yikes_pri <span class="dim">best in tier</span></td><td class="n">mid</td><td class="n">72d</td><td class="n">152,655</td><td class="g">4,218,136</td><td class="n">82,844</td><td class="n">44</td><td class="n">₹12 to 36</td><td class="n">₹0.6 to 1.8</td><td class="n">₹1,136 to 3,409</td></tr>
+    <tr><td class="rowlab">@thesortedgirl</td><td class="n">mid</td><td class="n">166d</td><td class="n">428,443</td><td class="n">3,858,037</td><td class="n">9,843</td><td class="n">456</td><td class="n">₹13 to 39</td><td class="n">₹5.1 to 15</td><td class="n">₹110 to 329</td></tr>
+    <tr><td class="rowlab">@dilliwalasharma <span class="dim">still settling · not on the brand grid</span></td><td class="n">mid</td><td class="n">12d</td><td class="n">234,441</td><td class="n">3,035,155</td><td class="n">158,861</td><td class="n">204</td><td class="n">₹16 to 49</td><td class="n">₹0.3 to 0.9</td><td class="n">₹245 to 735</td></tr>
+    <tr><td class="rowlab">@karansinghmagic <span class="dim">still settling</span></td><td class="n">mid</td><td class="n">8d</td><td class="n">174,894</td><td class="n">593,563</td><td class="n">3,209</td><td class="n">60</td><td class="n">₹84 to 253</td><td class="n">₹16 to 47</td><td class="n">₹833 to 2,500</td></tr>
+    <tr><td class="rowlab">@namankapooooor <span class="dim">still settling</span></td><td class="n">macro</td><td class="n">2d</td><td class="n">507,906</td><td class="n">464,919</td><td class="n">20,307</td><td class="n">49</td><td class="n">₹430 to 1,075</td><td class="n">₹9.8 to 25</td><td class="n">₹4,082 to 10,204</td></tr>
+    <tr><td class="rowlab">@trishia_santhus</td><td class="n">micro</td><td class="n">51d</td><td class="n">48,556</td><td class="n">257,835</td><td class="n">793</td><td class="n">36</td><td class="n">₹58 to 194</td><td class="n">₹19 to 63</td><td class="n">₹417 to 1,389</td></tr>
+    <tr><td class="rowlab">@mockministerrrr</td><td class="n">mid</td><td class="n">35d</td><td class="n">164,530</td><td class="n">256,644</td><td class="n">7,915</td><td class="n">164</td><td class="n">₹195 to 584</td><td class="n">₹6.3 to 19</td><td class="n">₹305 to 915</td></tr>
+    <tr><td class="rowlab">@officialrohitsaluja <span class="dim">still settling</span></td><td class="n">mid</td><td class="n">1d</td><td class="n">200,233</td><td class="n">253,155</td><td class="n">9,469</td><td class="n">89</td><td class="n">₹198 to 593</td><td class="n">₹5.3 to 16</td><td class="n">₹562 to 1,685</td></tr>
+    <tr><td class="rowlab">@kanak.on.earth <span class="dim">still settling</span></td><td class="n">micro</td><td class="n">2d</td><td class="n">38,977</td><td class="n">208,686</td><td class="n">7,893</td><td class="n">69</td><td class="n">₹72 to 240</td><td class="n">₹1.9 to 6.3</td><td class="n">₹217 to 725</td></tr>
+    <tr><td class="rowlab">@tyagijikachotabetaa</td><td class="n">mid</td><td class="n">73d</td><td class="n">139,900</td><td class="n">152,240</td><td class="n">hidden</td><td class="n">11</td><td class="n">₹328 to 985</td><td class="n"><span class="dim">likes hidden</span></td><td class="n">₹4,545 to 13,636</td></tr>
+    <tr><td class="rowlab">@ibhavyasachdeva</td><td class="n">micro</td><td class="n">48d</td><td class="n">36,474</td><td class="n">150,226</td><td class="n">342</td><td class="n">33</td><td class="n">₹100 to 333</td><td class="n">₹44 to 146</td><td class="n">₹455 to 1,515</td></tr>
+    <tr><td class="rowlab">@reji_annan_salem</td><td class="n">mid</td><td class="n">50d</td><td class="n">213,180</td><td class="n">141,394</td><td class="n">2,326</td><td class="n">221</td><td class="n">₹354 to 1,061</td><td class="n">₹21 to 64</td><td class="n">₹226 to 679</td></tr>
+    <tr><td class="rowlab">@heyjns <span class="dim">still settling</span></td><td class="n">mid</td><td class="n">9d</td><td class="n">284,213</td><td class="n">125,536</td><td class="n">3,012</td><td class="n">33</td><td class="n">₹398 to 1,195</td><td class="n">₹17 to 50</td><td class="n">₹1,515 to 4,545</td></tr>
+    <tr><td class="rowlab">@thesortedgirl+@rapperkaviraa</td><td class="n">mid</td><td class="n">27d</td><td class="n">428,443</td><td class="n">123,460</td><td class="n">1,684</td><td class="n">225</td><td class="n">₹405 to 1,215</td><td class="n">₹30 to 89</td><td class="n">₹222 to 667</td></tr>
+    <tr><td class="rowlab">@kunchlo</td><td class="n">micro</td><td class="n">25d</td><td class="n">80,508</td><td class="n">109,422</td><td class="n">3,823</td><td class="n">128</td><td class="n">₹137 to 457</td><td class="n">₹3.9 to 13</td><td class="n">₹117 to 391</td></tr>
+    <tr><td class="rowlab">@vanikasangtani <span class="dim">still settling</span></td><td class="n">macro</td><td class="n">6d</td><td class="n">524,433</td><td class="n">79,354</td><td class="n">2,522</td><td class="n">68</td><td class="n">₹2,520 to 6,301</td><td class="n">₹79 to 198</td><td class="n">₹2,941 to 7,353</td></tr>
+    <tr><td class="rowlab">@thesaikharatmol <span class="dim">still settling</span></td><td class="n">micro</td><td class="n">7d</td><td class="n">56,717</td><td class="n">77,923</td><td class="n">4,968</td><td class="n">47</td><td class="n">₹192 to 642</td><td class="n">₹3.0 to 10</td><td class="n">₹319 to 1,064</td></tr>
+    <tr><td class="rowlab">@lakshay_gaurr</td><td class="n">mid</td><td class="n">34d</td><td class="n">261,104</td><td class="n">72,921</td><td class="n">2,993</td><td class="n">46</td><td class="n">₹686 to 2,057</td><td class="n">₹17 to 50</td><td class="n">₹1,087 to 3,261</td></tr>
+    <tr><td class="rowlab">@krrishnischal <span class="dim">still settling</span></td><td class="n">micro</td><td class="n">6d</td><td class="n">25,104</td><td class="n">58,030</td><td class="n">141</td><td class="n">15</td><td class="n">₹258 to 862</td><td class="n">₹106 to 355</td><td class="n">₹1,000 to 3,333</td></tr>
+    <tr><td class="rowlab">@wisprflow <span class="dim">own account</span></td><td class="n">micro</td><td class="n">27d</td><td class="n">76,966</td><td class="n">57,721</td><td class="n">441</td><td class="n">34</td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td></tr>
+    <tr><td class="rowlab">@dontcallmekanye</td><td class="n">mid</td><td class="n">15d</td><td class="n">140,125</td><td class="n">55,842</td><td class="n">752</td><td class="n">66</td><td class="n">₹895 to 2,686</td><td class="n">₹66 to 199</td><td class="n">₹758 to 2,273</td></tr>
+    <tr><td class="rowlab">@ai.noobstoninjas</td><td class="n">mid</td><td class="n">49d</td><td class="n">240,140</td><td class="n">53,563</td><td class="n">968</td><td class="n">1084</td><td class="n">₹933 to 2,800</td><td class="n">₹52 to 155</td><td class="n">₹46 to 138</td></tr>
+    <tr><td class="rowlab">@aryanxpansion <span class="dim">still settling</span></td><td class="n">mid</td><td class="n">11d</td><td class="n">157,454</td><td class="n">45,840</td><td class="n">1,251</td><td class="n">136</td><td class="n">₹1,091 to 3,272</td><td class="n">₹40 to 120</td><td class="n">₹368 to 1,103</td></tr>
+    <tr><td class="rowlab">@kanak.on.earth <span class="dim">not on the brand grid</span></td><td class="n">micro</td><td class="n">23d</td><td class="n">38,977</td><td class="n">43,425</td><td class="n">1,418</td><td class="n">32</td><td class="n">₹345 to 1,151</td><td class="n">₹11 to 35</td><td class="n">₹469 to 1,562</td></tr>
+    <tr><td class="rowlab">@ayushwadhwa</td><td class="n">mid</td><td class="n">153d</td><td class="n">390,582</td><td class="n">43,126</td><td class="n">971</td><td class="n">37</td><td class="n">₹1,159 to 3,478</td><td class="n">₹51 to 154</td><td class="n">₹1,351 to 4,054</td></tr>
+    <tr><td class="rowlab">@kunalbhan+@zeptonow</td><td class="n">mid</td><td class="n">24d</td><td class="n">155,397</td><td class="n">42,433</td><td class="n">865</td><td class="n">77</td><td class="n">₹1,178 to 3,535</td><td class="n">₹58 to 173</td><td class="n">₹649 to 1,948</td></tr>
+    <tr><td class="rowlab">@the_ecomjet</td><td class="n">mid</td><td class="n">18d</td><td class="n">343,416</td><td class="n">40,104</td><td class="n">523</td><td class="n">27</td><td class="n">₹1,247 to 3,740</td><td class="n">₹96 to 287</td><td class="n">₹1,852 to 5,556</td></tr>
+    <tr><td class="rowlab">@gayatri.tech <span class="dim">floor of the same tier</span></td><td class="n">mid</td><td class="n">118d</td><td class="n">253,696</td><td class="n">38,259</td><td class="n">708</td><td class="n">19</td><td class="n">₹1,307 to 3,921</td><td class="n">₹71 to 212</td><td class="n">₹2,632 to 7,895</td></tr>
+    <tr><td class="rowlab">@zeptonow <span class="dim">brand swap</span></td><td class="n">macro</td><td class="n">25d</td><td class="n">749,158</td><td class="n">36,617</td><td class="n">325</td><td class="n">362</td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td></tr>
+    <tr><td class="rowlab">@kausttubh+@kibykinjal+@___sakshiimokadam+@gauravshivaji_ <span class="dim">still settling</span></td><td class="n">micro</td><td class="n">5d</td><td class="n">20,152</td><td class="n">22,362</td><td class="n">873</td><td class="n">155</td><td class="n">₹671 to 2,236</td><td class="n">₹17 to 57</td><td class="n">₹97 to 323</td></tr>
+    <tr><td class="rowlab">@anshikaacts <span class="dim">still settling</span></td><td class="n">micro</td><td class="n">3d</td><td class="n">48,078</td><td class="n">16,565</td><td class="n">499</td><td class="n">30</td><td class="n">₹906 to 3,018</td><td class="n">₹30 to 100</td><td class="n">₹500 to 1,667</td></tr>
+    <tr><td class="rowlab">@sparxbymukeshbansal <span class="dim">earned</span></td><td class="n">micro</td><td class="n">67d</td><td class="n">68,063</td><td class="n">11,835</td><td class="n">274</td><td class="n">3</td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td><td class="n"><span class="dim">no fee</span></td></tr>
+  </table></div>
+      <p class="fine"><b>Measured:</b> followers, views, likes, comments and post date, read from every collab reel on 1 September 2026. <b>Estimated:</b> the fee, and only as the tier band above. Two of the thirty-two sit on the creator's profile and not on the brand grid, so counting only the brand grid misses them, including the second-largest reel in the book.</p>
+      <p class="fine"><b>The headline needs no exact fee at all.</b> Thirteen settled collaborations sit in the 100K to 500K tier, where market rates run roughly ₹50,000 to ₹150,000. That is about a 3x range of fee against a 110x range of views, so the reach gap is far wider than the fee can account for. Views are reach rather than result, and an Instagram caption is not tappable, so the book shares one destination and there is no way to tell which of the thirteen produced installs. The fix runs on rails Wispr already owns: affiliate links with per-link tracking, and a referral link for every paid user.</p>
+    </div>
+  </details>
+</section>
+
+<!-- 02 · the system -->
+<section class="act tall" id="s2" style="text-align:left">
+  <p class="kick">02 · The machine</p>
+  <div class="bigline">This is <span class="a">APERTURE</span>.</div>
+  <p class="lead">An aperture controls exposure: <b>how much gets through, and where.</b> One loop: money goes out, four kinds of receipts come back, and one table decides what happens the next day.</p>
+  <p class="hint"><b>Click</b> any block to trace its path through the money · on a desktop, hover for a one-line description</p>
+  <div class="bpwide"><div class="bpscroll"><svg id="bp" viewBox="0 0 1300 860" role="img" aria-label="APERTURE blueprint: humans set the box and approve exceptions; the brain moves money through four capped lanes and one audit onto nine channels; four kinds of receipts return to one ledger, which the brain reads again on the next cycle">
+<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--accent)"/></marker><marker id="ag" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--gain)"/></marker><marker id="ab" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6.4" markerHeight="6.4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--accent)"/></marker><marker id="arail" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--accent)"/></marker><marker id="grail" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--gain)"/></marker><filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g class="bands">
+<rect class="band" x="118.0" y="36" width="1140.0" height="142" rx="16"/>
+<text class="bandlab" x="104.0" y="111.0">DECIDE</text>
+<rect class="band" x="118.0" y="200" width="1140.0" height="118" rx="16"/>
+<text class="bandlab" x="104.0" y="263.0">EXECUTE</text>
+<rect class="band" x="118.0" y="340" width="1140.0" height="58" rx="16"/>
+<text class="bandlab" x="104.0" y="373.0">REVIEW</text>
+<rect class="band" x="118.0" y="420" width="1140.0" height="120" rx="16"/>
+<text class="bandlab" x="104.0" y="484.0">CHANNELS</text>
+<rect class="band" x="118.0" y="562" width="1140.0" height="116" rx="16"/>
+<text class="bandlab" x="104.0" y="624.0">RECEIPTS</text>
+<rect class="band" x="118.0" y="700" width="1140.0" height="118" rx="16"/>
+<text class="bandlab" x="104.0" y="763.0">RECORD</text>
+</g>
+<g class="rails"><path class="rail out" d="M 22.0 247.0 L 22.0 607.0" marker-end="url(#arail)"/><text class="raillab out" transform="translate(9.0,427.0) rotate(-90)" text-anchor="middle">₹ OUT</text><path class="rail ev" d="M 1278.0 607.0 L 1278.0 247.0" marker-end="url(#grail)"/><text class="raillab ev" transform="translate(1291.0,427.0) rotate(90)" text-anchor="middle">EVIDENCE BACK</text></g>
+<path id="e-council-al" class="dedge gov" d="M 402.0 106 L 492.0 106"/>
+<path id="e-gates-al" class="dedge gov" d="M 974.0 106 L 884.0 106"/>
+<path id="e-al-buy" class="dedge " d="M 688.0 154.0 C 688.0 188.0 281.0 188.0 281.0 222.0" marker-end="url(#ar)"/>
+<path id="e-al-scout" class="dedge " d="M 688.0 154.0 C 688.0 188.0 552.3 188.0 552.3 222.0" marker-end="url(#ar)"/>
+<path id="e-al-produce" class="dedge " d="M 688.0 154.0 C 688.0 188.0 823.7 188.0 823.7 222.0" marker-end="url(#ar)"/>
+<path id="e-al-partner" class="dedge " d="M 688.0 154.0 C 688.0 188.0 1095.0 188.0 1095.0 222.0" marker-end="url(#ar)"/>
+<path id="e-scout-prod" class="dedge gov" d="M 681.3 264 L 688.7 264"/>
+<path id="e-buy-meta" class="dedge " d="M 281.0 306.0 C 281.0 374.0 207.0 374.0 207.0 442.0" marker-end="url(#ar)"/>
+<path id="e-buy-goog" class="dedge " d="M 281.0 306.0 C 281.0 374.0 327.2 374.0 327.2 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-ytc" class="dedge " d="M 823.7 306.0 C 823.7 374.0 447.5 374.0 447.5 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-igc" class="dedge " d="M 823.7 306.0 C 823.7 374.0 567.8 374.0 567.8 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-wa" class="dedge " d="M 823.7 306.0 C 823.7 374.0 688.0 374.0 688.0 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-owned" class="dedge " d="M 823.7 306.0 C 823.7 374.0 808.2 374.0 808.2 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-streets" class="dedge " d="M 823.7 306.0 C 823.7 374.0 928.5 374.0 928.5 442.0" marker-end="url(#ar)"/>
+<path id="e-produce-threads" class="dedge " d="M 823.7 306.0 C 823.7 374.0 1048.8 374.0 1048.8 442.0" marker-end="url(#ar)"/>
+<path id="e-partner-b2b" class="dedge " d="M 1095.0 306.0 C 1095.0 374.0 1169.0 374.0 1169.0 442.0" marker-end="url(#ar)"/>
+<path id="e-meta-adapi" class="dedge eviden" d="M 207.0 522.0 C 207.0 553.0 281.0 553.0 281.0 584.0" marker-end="url(#ag)"/>
+<path id="e-goog-adapi" class="dedge eviden" d="M 327.2 522.0 C 327.2 553.0 281.0 553.0 281.0 584.0" marker-end="url(#ag)"/>
+<path id="e-ytc-codes" class="dedge eviden" d="M 447.5 522.0 C 447.5 553.0 552.3 553.0 552.3 584.0" marker-end="url(#ag)"/>
+<path id="e-igc-codes" class="dedge eviden" d="M 567.8 522.0 C 567.8 553.0 552.3 553.0 552.3 584.0" marker-end="url(#ag)"/>
+<path id="e-wa-links" class="dedge eviden" d="M 688.0 522.0 C 688.0 553.0 823.7 553.0 823.7 584.0" marker-end="url(#ag)"/>
+<path id="e-owned-links" class="dedge eviden" d="M 808.2 522.0 C 808.2 553.0 823.7 553.0 823.7 584.0" marker-end="url(#ag)"/>
+<path id="e-streets-links" class="dedge eviden" d="M 928.5 522.0 C 928.5 553.0 823.7 553.0 823.7 584.0" marker-end="url(#ag)"/>
+<path id="e-threads-links" class="dedge eviden" d="M 1048.8 522.0 C 1048.8 553.0 823.7 553.0 823.7 584.0" marker-end="url(#ag)"/>
+<path id="e-b2b-domains" class="dedge eviden" d="M 1169.0 522.0 C 1169.0 553.0 1095.0 553.0 1095.0 584.0" marker-end="url(#ag)"/>
+<path id="e-adapi-led" class="dedge eviden" d="M 281.0 664.0 C 281.0 693.0 688.0 693.0 688.0 722.0" marker-end="url(#ag)"/>
+<path id="e-codes-led" class="dedge eviden" d="M 552.3 664.0 C 552.3 693.0 688.0 693.0 688.0 722.0" marker-end="url(#ag)"/>
+<path id="e-links-led" class="dedge eviden" d="M 823.7 664.0 C 823.7 693.0 688.0 693.0 688.0 722.0" marker-end="url(#ag)"/>
+<path id="e-domains-led" class="dedge eviden" d="M 1095.0 664.0 C 1095.0 693.0 688.0 693.0 688.0 722.0" marker-end="url(#ag)"/>
+<path id="e-igc-meta" class="dedge boost" d="M 520.8 522.0 C 472.8 558 212.0 558 207.0 525.0" marker-end="url(#ab)"/>
+<path id="e-ytc-goog" class="dedge boost" d="M 400.5 522.0 C 362.5 546 342.2 546 327.2 525.0" marker-end="url(#ab)"/>
+<path id="e-led-al" class="dedge ret" d="M 1008.0 762 C 1150 762 1246 720 1246 652 L 1246 86 C 1246 48 1210 26 1170 26 L 728.0 24 C 696.0 24 688.0 38 688.0 54" marker-end="url(#ar)"/>
+<g class="dnode fam-human" data-n="council" tabindex="0" role="button" aria-label="WEEKLY COUNCIL"><rect x="152.0" y="58.0" width="250.0" height="96.0" rx="12"/><text class="nt" x="277.0" y="89.0">WEEKLY COUNCIL</text><text class="ns" x="277.0" y="109.0">concepts · deals · ceilings</text><text class="tag" x="277.0" y="128.0">humans, once a week</text></g>
+<g class="dnode fam-brain hero" data-n="al" tabindex="0" role="button" aria-label="APERTURE"><rect x="498.0" y="58.0" width="380.0" height="96.0" rx="12"/><text class="nt hero" x="688.0" y="92.0">APERTURE</text><text class="ns" x="688.0" y="113.0">the brain</text><text class="nx" x="688.0" y="132.0">reads the ledger · moves ₹ · operator-set cadence</text></g>
+<g class="dnode fam-human" data-n="gates" tabindex="0" role="button" aria-label="HUMAN GATES"><rect x="974.0" y="58.0" width="250.0" height="96.0" rx="12"/><text class="nt" x="1099.0" y="89.0">HUMAN GATES</text><text class="ns" x="1099.0" y="109.0">above any cap: a person</text><text class="tag" x="1099.0" y="128.0">humans, any time</text></g>
+<g class="dnode fam-lane" data-n="buy" tabindex="0" role="button" aria-label="BUY"><rect x="152.0" y="222.0" width="258.0" height="84.0" rx="12"/><text class="nt" x="281.0" y="253.0">BUY</text><text class="ns" x="281.0" y="273.0">brand ads + creator winners</text><text class="tag" x="281.0" y="292.0">capped per action</text></g>
+<g class="dnode fam-lane" data-n="scout" tabindex="0" role="button" aria-label="SCOUT"><rect x="423.3" y="222.0" width="258.0" height="84.0" rx="12"/><text class="nt" x="552.3" y="253.0">SCOUT</text><text class="ns" x="552.3" y="273.0">ranks creators on past ₹/view</text><text class="tag" x="552.3" y="292.0">shortlist → a person approves</text></g>
+<g class="dnode fam-lane" data-n="produce" tabindex="0" role="button" aria-label="PRODUCE"><rect x="694.7" y="222.0" width="258.0" height="84.0" rx="12"/><text class="nt" x="823.7" y="253.0">PRODUCE</text><text class="ns" x="823.7" y="273.0">briefs · variants · replies</text><text class="tag" x="823.7" y="292.0">a person approves each batch</text></g>
+<g class="dnode fam-lane" data-n="partner" tabindex="0" role="button" aria-label="PARTNER"><rect x="966.0" y="222.0" width="258.0" height="84.0" rx="12"/><text class="nt" x="1095.0" y="253.0">PARTNER</text><text class="ns" x="1095.0" y="273.0">deals a person signs</text><text class="tag" x="1095.0" y="292.0">drafted, never sent alone</text></g>
+<g class="dnode fam-wall" data-n="meta" tabindex="0" role="button" aria-label="META"><rect x="152.0" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="207.0" y="473.0">META</text><text class="ns sm" x="207.0" y="491.0">ads</text><text class="tag" x="207.0" y="509.0">their AI</text></g>
+<g class="dnode fam-wall" data-n="goog" tabindex="0" role="button" aria-label="GOOGLE"><rect x="272.2" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="327.2" y="473.0">GOOGLE</text><text class="ns sm" x="327.2" y="491.0">YouTube ads</text><text class="tag" x="327.2" y="509.0">their AI</text></g>
+<g class="dnode fam-open" data-n="ytc" tabindex="0" role="button" aria-label="YOUTUBE"><rect x="392.5" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="447.5" y="473.0">YOUTUBE</text><text class="ns sm" x="447.5" y="491.0">creators</text><text class="tag" x="447.5" y="509.0">code</text></g>
+<g class="dnode fam-open" data-n="igc" tabindex="0" role="button" aria-label="INSTAGRAM"><rect x="512.8" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="567.8" y="473.0">INSTAGRAM</text><text class="ns sm" x="567.8" y="491.0">creators</text><text class="tag" x="567.8" y="509.0">code</text></g>
+<g class="dnode fam-open" data-n="wa" tabindex="0" role="button" aria-label="WHATSAPP"><rect x="633.0" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="688.0" y="473.0">WHATSAPP</text><text class="ns sm" x="688.0" y="491.0">forwards</text><text class="tag" x="688.0" y="509.0">link</text></g>
+<g class="dnode fam-open" data-n="owned" tabindex="0" role="button" aria-label="OWNED"><rect x="753.2" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="808.2" y="473.0">OWNED</text><text class="ns sm" x="808.2" y="491.0">own pages</text><text class="tag" x="808.2" y="509.0">link</text></g>
+<g class="dnode fam-open" data-n="streets" tabindex="0" role="button" aria-label="STREETS"><rect x="873.5" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="928.5" y="473.0">STREETS</text><text class="ns sm" x="928.5" y="491.0">autos · QR</text><text class="tag" x="928.5" y="509.0">link</text></g>
+<g class="dnode fam-open" data-n="threads" tabindex="0" role="button" aria-label="THREADS"><rect x="993.8" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="1048.8" y="473.0">THREADS</text><text class="ns sm" x="1048.8" y="491.0">X · Reddit</text><text class="tag" x="1048.8" y="509.0">link</text></g>
+<g class="dnode fam-open" data-n="b2b" tabindex="0" role="button" aria-label="FIRMS"><rect x="1114.0" y="442.0" width="110.0" height="80.0" rx="12"/><text class="nt sm" x="1169.0" y="473.0">FIRMS</text><text class="ns sm" x="1169.0" y="491.0">B2B inbound</text><text class="tag" x="1169.0" y="509.0">domain</text></g>
+<g class="dnode fam-evid" data-n="adapi" tabindex="0" role="button" aria-label="AD APIs"><rect x="152.0" y="584.0" width="258.0" height="80.0" rx="12"/><text class="nt" x="281.0" y="615.0">AD APIs</text><text class="ns" x="281.0" y="635.0">spend & conversions</text><text class="tag" x="281.0" y="654.0">nightly</text></g>
+<g class="dnode fam-evid" data-n="codes" tabindex="0" role="button" aria-label="PROMO CODES"><rect x="423.3" y="584.0" width="258.0" height="80.0" rx="12"/><text class="nt" x="552.3" y="615.0">PROMO CODES</text><text class="ns" x="552.3" y="635.0">one code per creator</text><text class="tag" x="552.3" y="654.0">per redemption</text></g>
+<g class="dnode fam-evid" data-n="links" tabindex="0" role="button" aria-label="TRACKED LINKS"><rect x="694.7" y="584.0" width="258.0" height="80.0" rx="12"/><text class="nt" x="823.7" y="615.0">TRACKED LINKS</text><text class="ns" x="823.7" y="635.0">installs per line</text><text class="tag" x="823.7" y="654.0">measured nightly</text></g>
+<g class="dnode fam-evid" data-n="domains" tabindex="0" role="button" aria-label="SIGNUP DOMAINS"><rect x="966.0" y="584.0" width="258.0" height="80.0" rx="12"/><text class="nt" x="1095.0" y="615.0">SIGNUP DOMAINS</text><text class="ns" x="1095.0" y="635.0">which firms light up</text><text class="tag" x="1095.0" y="654.0">work emails</text></g>
+<g class="dnode fam-brain hero" data-n="ledger" tabindex="0" role="button" aria-label="THE LEDGER"><rect x="368.0" y="722.0" width="640.0" height="80.0" rx="12"/><text class="nt hero" x="688.0" y="756.0">THE LEDGER</text><text class="ns" x="688.0" y="777.0">one row per line of spend</text><text class="nx" x="688.0" y="796.0">₹ out · views · installs · payers · nightly</text></g>
+<g class="dnode fam-audit bar" data-n="audit" tabindex="0" role="button" aria-label="AUDIT"><rect x="152.0" y="354.0" width="1072.0" height="40.0" rx="12"/><text class="nt bar" x="688.0" y="379.0">AUDIT · disclosure · the ASCI code · brand tone · nothing ships without passing</text></g>
+</svg></div></div>
+  <div class="bplegend">
+    <span><i class="hum"></i>humans decide</span>
+    <span><i class="mac"></i>machine moves money</span>
+    <span><i class="aud"></i>audit gate</span>
+    <span><i class="wal"></i>platform-run, their AI</span>
+    <span><i class="evi"></i>evidence coming back</span>
+    <span><i class="bst"></i>winners re-run as paid, from the creator’s own handle</span>
+  </div>
+  <p class="fine" style="margin:14px 0 0;max-width:none"><b>What &ldquo;moves &#8377;&rdquo; means.</b> The brain reads the ledger and puts more behind what is working: run the line again, extend the format, take it to the next audience. What is not working stops taking spend, and that budget returns to the pool. Either way, the money follows the evidence.</p>
+  <div id="bpd"><span class="t">The blueprint</span><div class="b">Click any block to trace the path money takes through it, and read what it does in plain words: what goes in, what comes out, and which tools run it.</div></div>
+  <details class="tg">
+    <summary>Testing the allocator &middot; what is the rule actually worth?</summary>
+    <div class="bd">
+  <p class="lead"><b>Two budgeting rules, one synthetic market.</b> Twenty-four campaigns carry true costs the allocator cannot see, and every one of them fatigues over ninety days. Both lines spend the same monthly budget. The grey line splits it evenly and holds; the coloured line re-prices each campaign from what came back and moves the money. The gap between them is what the rule is worth.</p>
+  <p class="fine" style="max-width:none;margin:14px 0 0"><b>What the model assumes.</b> No funnel is modelled and no conversion rate is assumed: each campaign is simply given a hidden true cost per install, and installs are spend divided by that cost. Everything is indexed to the equal split at 100, because the size of the lead does not depend on the cost level. In a separate run, scaling every campaign four times cheaper and then four times dearer left the lead at +51%, which is why the chart is drawn as an index rather than in rupees. There is no control for that on this page.</p>
+  <div class="panel">
+    <div class="phead">
+      <span class="ptitle">aperture_allocator · 24 campaigns · 90 days · same budget on both lines · synthetic market, real engine</span>
+      <div class="ctrl">
+        <button id="speed">7×</button>
+        <button id="run" class="primary">▶ run</button>
+        <button id="reset">replay</button>
+      </div>
+    </div>
+    <div class="knobs">
+      <div class="knob"><span class="kl">How different the campaigns are</span>
+        <div class="ctrl">
+          <button class="sp" data-sp="narrow">nearly the same</button>
+          <button class="sp primary" data-sp="mid">mixed</button>
+          <button class="sp" data-sp="wide">very different</button>
+        </div>
+      </div>
+      <div class="knob"><span class="kl">Creative fatigue</span>
+        <div class="ctrl">
+          <button class="ft primary" data-ft="1">on</button>
+          <button class="ft" data-ft="0">off</button>
+        </div>
+      </div>
+    </div>
+    <div class="scores">
+      <div class="ss"><div class="l">Day</div><div class="v" id="sDay">0</div><div class="u">of 90</div></div>
+      <div class="ss"><div class="l">Installs · APERTURE</div><div class="v acc" id="sBandit">·</div><div class="u">indexed, cost per install <span id="sBcpi">·</span></div></div>
+      <div class="ss"><div class="l">Installs · equal split</div><div class="v" id="sBase">100</div><div class="u">the baseline, cost per install 1.00&times;</div></div>
+      <div class="ss"><div class="l">Edge</div><div class="v" id="sLift">·</div><div class="u">same budget, same market</div></div>
+    </div>
+    <canvas id="chart" width="1600" height="500" role="img" aria-label="Cumulative installs over 90 days: APERTURE versus equal split"></canvas>
+    <p class="fine" style="margin:12px 0 6px;max-width:none">Each bar below is one of the twenty-four campaigns, six audiences across four channels, and its height is that campaign&rsquo;s share of today&rsquo;s budget. Hover or tap a bar to name it.</p>
+    <div class="alloc-strip" id="strip" aria-label="Today's budget allocation across 24 campaigns"></div>
+    <p class="fine" style="margin:14px 0 6px;max-width:none">And the allocator&rsquo;s four most recent moves, in its own words:</p>
+    <div class="tape" id="tape" aria-label="Allocator decisions"></div>
+    <p class="fine" style="margin:14px 0 0;max-width:none"><b>A slow start is not a verdict.</b> Money concentrates from day one, so a line can lose share in its first week. Two things bring it back. Every campaign keeps a small share of the budget for all ninety days, so nothing is ever switched off. And old evidence fades daily, so a bad first week stops counting once a line improves. In one separate run, a line planted nine times too expensive and repaired on day 55 was the biggest position by day 90. Recovery took five weeks, so a late repair runs out of runway.</p>
+    <p class="fine" style="margin:14px 0 0;max-width:none"><b>The edge depends on spread.</b> Make every campaign cost nearly the same and moving money is worth almost nothing. Widen the gap and the rule is worth more. So the number to look at is the real book above: 110x apart in views inside one follower tier, against a fee range of about 3x. Same settings always give the same market.</p>
+  
+  </div>
+</div>
+  </details>
+</section>
+
+<!-- 02c · the simulation -->
+
+
+
+<!-- 02c0 · takeaways -->
+<section class="act">
+  <p class="kick">The takeaways</p>
+  <h2>What changes, concretely.</h2>
+  <div class="xscroll"><table>
+    <tr><th></th><th>The usual default</th><th>On this engine</th></tr>
+    <tr><td class="rowlab">Creator work</td><td>unpriced; the cheapest and the most expensive collab look identical</td><td><b>one tracked link per collab</b>, on the affiliate rails that already exist; offer pre-applied, nothing to type, and codes only where a link cannot travel</td></tr>
+    <tr><td class="rowlab">Campaigns in flight</td><td>capped by human hours</td><td><b>tens of big bets plus thousands of small ones</b>, agent-drafted, human-approved</td></tr>
+    <tr><td class="rowlab">Targeting</td><td>broad audiences, set at launch</td><td><b>ledger-ranked</b>: every audience and message carries a measured cost per thousand views</td></tr>
+    <tr><td class="rowlab">Languages</td><td>campaigns in English and Hinglish</td><td><b>a creator book per language</b>: 14 Indian languages already live in the product, and near-zero competition for regional creator attention</td></tr>
+    <tr><td class="rowlab">First channel</td><td>email and web defaults</td><td><b>WhatsApp first</b>: tracked forwards, and a Hinglish voice agent that onboards by talking</td></tr>
+    <tr><td class="rowlab">Cadence</td><td>reviewed weekly or monthly</td><td>receipts <b>nightly</b> · money moves on <b>a dial the operator sets</b>: daily by default, hourly when it matters · humans weekly</td></tr>
+    <tr><td class="rowlab">Losers</td><td>fade out slowly, or get renewed out of habit</td><td><b>demoted to a floor the same morning</b>, and re-tested: a line that turns around earns its way back</td></tr>
+  </table></div>
+    <div class="logic">
+    <div class="row"><span class="no">LANGUAGES</span><span class="tx"><b>One insight, fourteen books.</b> A proven hook gets rebuilt for each audience: the same dead-time idea becomes a Hindi kitchen reel and a Tamil bus-stop reel, each with its own creator, its own code, and its own row in the ledger. Nothing regional ships without a native speaker approving it. <span class="dim">Live in the product today: Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Punjabi, Sanskrit, Sindhi, Tamil, Telugu and Urdu, plus Hinglish and English.</span></span></div>
+  </div>
+    </section>
+
+
+
+<!-- 02b · b2b map -->
+<section class="act">
+  <p class="kick">B2B &middot; the buyer map</p>
+  <h2>Where India&rsquo;s B2B actually lives.</h2>
+  <p class="lead">Everything above is B2C, and its job is to manufacture users. B2B turns those users into revenue, and here it starts from exactly that consumer scale, because you get the users first and then find out which companies they work at. <b>Every install at a workplace is a seed.</b></p>
+  <p class="lead">But the usage and the budgets sit in different rooms, and no one has measured which room converts. What works for the Fortune 500 will not necessarily work for the NIFTY-100, so the B2B side does not import a playbook. <b>It runs one cheap probe per segment and lets the receipts pick the motion.</b></p>
+  <div class="xscroll"><table>
+    <tr><th>Segment</th><th>Who signs, and how</th><th>The first probe</th></tr>
+    <tr><td class="rowlab">Global capability centres</td><td>2,117 centers, 2.36M professionals (Nasscom-Zinnov). Usage grows here; tool budgets usually sit with the parent abroad, so the India office rarely signs alone.</td><td>Arm the power users already inside: usage stories and internal-pitch kits, and measure which firms&rsquo; domains light up. No outreach to HQ until a champion asks for it.</td></tr>
+    <tr><td class="rowlab">Funded startups</td><td>Founders and heads of engineering sign fast, pay in rupees, and copy each other&rsquo;s tools.</td><td>Founder communities and demo days; Teams trials with zero seat minimums; measure trial-to-paid by cohort.</td></tr>
+    <tr><td class="rowlab">NIFTY-100 enterprises</td><td>Real budgets, long procurement, and the in-house teams (legal, finance, communications) buy narrower tools than HQ-style engineering suites.</td><td>Enter through one function with a proven wedge. The campaign below runs exactly this, end to end.</td></tr>
+    <tr><td class="rowlab">IT services &amp; consulting</td><td>Enormous seat counts, centralised procurement, thin per-seat budgets.</td><td>One delivery team, one pilot, priced honestly; scale only if per-seat economics survive.</td></tr>
+    <tr><td class="rowlab">Professional firms</td><td>Law and accountancy firms: partners sign, peers convince, documentation is the work itself.</td><td>The campaign below is this probe, end to end.</td></tr>
+  </table></div>
+  </section>
+
+<!-- 02d · kivi -->
+<section class="act">
+  <p class="kick">The competition</p>
+  <h2>Sarvam is shipping Kivi.</h2>
+  <p class="lead">Announced in August for the PC in 22+ Indian languages, with an MoU to pre-install on HP laptops. That is distribution nobody outspends.</p>
+  <p class="lead" style="margin-top:14px">Regional voice in India goes to whoever gets there first.</p>
+  <p style="margin:18px 0 0"><a class="linkout" href="https://heykivi.ai/" target="_blank" rel="noopener">heykivi.ai&nbsp;&nbsp;&rarr;</a></p>
+</section>
+
+<!-- 03 · lawyers -->
+<section class="act" id="s3">
+  <p class="kick">03 &middot; The case study</p>
+  <h2>Wispr for lawyers<br>and law students.</h2>
+  <div class="bigline" style="margin-top:16px;font-size:clamp(21px,2.7vw,29px)">Less time drafting. <span class="a">More time thinking.</span></div>
+  <p class="lead" style="margin-top:16px">Two million advocates in India already dictate for a living. Their judgment is what a client is paying for, and the day around it fills up with drafting, formatting, note-taking and logging time. Hand those hours back and they go to the work only a lawyer can do. Everything below runs on the machine above, and this is the first probe it gets pointed at.</p>
+  <p class="fine"><b>2,013,081 advocates</b> are enrolled with the state bar councils (Ministry of Law and Justice, figures reported to the Rajya Sabha). It is the one number on this page that is measured rather than modelled.</p>
+</section>
+
+<!-- 03a2 · what already ships -->
+<section class="act">
+  <p class="kick">What is already built</p>
+  <h2>Wispr has already shipped<br>the product for lawyers.</h2>
+  <p class="lead"><a class="inlink" href="https://wisprflow.ai/lawyers" target="_blank" rel="noopener">wisprflow.ai/lawyers</a> is live, and almost nobody in India has seen it. Four things on it carry the hours around the argument:</p>
+  <div class="logic">
+    <div class="row"><span class="no">DRAFTING</span><span class="tx"><b>Speak the analysis, get the document.</b> Dictation with AI edits turns spoken argument into formatted text inside the app the lawyer is already in, so contracts, briefs and case notes come out review-ready.</span></div>
+    <div class="row"><span class="no">VOCABULARY</span><span class="tx"><b>A personal dictionary and a snippet library.</b> Flow learns the terms a lawyer actually uses, and voice shortcuts fire whole clauses: confidentiality, billing terms, privilege disclaimers.</span></div>
+    <div class="row"><span class="no">MEETINGS</span><span class="tx"><b>Notetaker, and it is new.</b> Client consultations and chamber briefings become notes accurate enough to act on, across every meeting platform. This is the piece nobody in India has been shown.</span></div>
+    <div class="row"><span class="no">BILLING</span><span class="tx"><b>The meeting becomes the claim.</b> Billable entries get logged by voice as the work happens, which is the single most-skipped task in the profession. For someone who bills by time, a recovered hour is a billed hour.</span></div>
+  </div>
+  <p class="fine" style="max-width:none"><b>What it needs for India:</b> the dictionary ships seeded with <i>Sarbanes-Oxley</i>, <i>SCOTUS</i>, <i>Obergefell</i> and <i>Weil Gotshal</i>, and the snippet library with American NDAs and privacy policies. Swap in the BNS and BNSS, India&rsquo;s new criminal codes, plus Indian case names, court formats and cause-list language and the same product lands here. That is a vocabulary change rather than a rebuild. Security is most of the way there: zero data retention, nothing training on privileged content, a SOC 2 Type I completed in April 2026, and the Type II observation period running now. That is enough to open a pilot; the Type II report is what a top-tier firm will want before it signs across the whole firm.</p>
+</section>
+
+<!-- 03a3 · the wedge -->
+<section class="act">
+  <p class="kick">The wedge</p>
+  <h2>Give every law student<br>a year of Flow. Free.</h2>
+  <div class="logic">
+    <div class="row"><span class="no">REACH</span><span class="tx"><b>Legal-education creators and campus champions carry it.</b> They get ranked on what similar audiences have already cost, briefed in batches, and checked for disclosure before anything ships. Each one is priced the same way a reel is priced, and the ones that stop working stop taking budget that morning.</span></div>
+    <div class="row"><span class="no">THE OFFER</span><span class="tx"><b>Twelve months, where the standing student offer is three.</b> Wispr already runs three months free, then half price. For the national law universities, extend it to a full year, claimed through a link of its own so every campus is one priced row. A free seat costs almost nothing to serve, and buying the same cohort with ads costs real money. Apple has run this play for decades.</span></div>
+    <div class="row"><span class="no">TIMING</span><span class="tx"><b>Law is the only profession with a delivery schedule built in.</b> Internships land in May and in November, so the habit walks from campus into chambers twice a year, on time. The intern drafts by voice. The senior notices. The firm asks.</span></div>
+    <div class="row"><span class="no">PAYMENT</span><span class="tx"><b>The money comes last.</b> A year of dictation builds a personal dictionary of case names, clauses and court formats that nobody wants to rebuild elsewhere. Graduates convert at half price in their first working year, and firms sign per-seat annuals once five people on one domain are active.</span></div>
+  </div>
+  <details class="tg">
+    <summary>The order of attack, and the data flywheel</summary>
+    <div class="bd">
+  <h3>The order of attack</h3>
+  <p><b>Top firms first</b> (500+ major firms, ~30K fee-earners, est): what a top-firm associate uses, every junior in the country copies. Then <b>metros</b>, then <b>tier-2 courts and firms</b>, where Hindi and Hinglish are the working language and exactly where the product is strongest. Districts follow the price curve down.</p>
+
+  <h3>The data flywheel, consent-first</h3>
+  <p>Every opted-in lawyer teaches Flow the language of Indian law: section citations, Latin maxims, case-name pronunciation, drafting conventions. Vocabulary, never privileged content. By year 2 that is the largest corpus of Indian legal dictation anywhere, and it becomes <b>Flow Legal</b>: a specialised model no competitor can match without these same users. Treat it as upside; nothing on this page depends on it.</p>
+  </div>
+  </details>
+</section>
+
+<!-- 03a45 · how a firm gets sold -->
+<section class="act">
+  <p class="kick">B2B &middot; law firms</p>
+  <h2>How a firm gets sold.</h2>
+  <p class="lead">One line, left to right. The firm arrives on the list because its own people put it there.</p>
+  <div class="xscroll"><svg class="fc" viewBox="0 0 1020 190" role="img" aria-label="How a firm gets sold: a free year for law students, they graduate into associates, five actives appear on one firm domain, a fourteen day pilot, then per-seat annuals and Notetaker">
+  <defs><marker id="fcar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--ink-3)"/></marker></defs>
+  <g class="fcx"><path d="M177 88 L209 88"/><path d="M387 88 L419 88"/><path d="M597 88 L629 88"/><path d="M807 88 L839 88"/></g>
+  <g class="fcn"><rect x="5" y="42" width="170" height="92" rx="13"/><text class="fct" x="90" y="83">FREE YEAR</text><text class="fcs" x="90" y="108">law students</text></g>
+  <g class="fcn"><rect x="215" y="42" width="170" height="92" rx="13"/><text class="fct" x="300" y="83">ASSOCIATE</text><text class="fcs" x="300" y="108">now billing hours</text></g>
+  <g class="fcn on"><rect x="425" y="42" width="170" height="92" rx="13"/><text class="fct" x="510" y="83">FIVE ACTIVES</text><text class="fcs" x="510" y="108">on one firm domain</text></g>
+  <g class="fcn"><rect x="635" y="42" width="170" height="92" rx="13"/><text class="fct" x="720" y="83">PILOT</text><text class="fcs" x="720" y="108">14 days, one group</text></g>
+  <g class="fcn win"><rect x="845" y="42" width="170" height="92" rx="13"/><text class="fct" x="930" y="83">SEATS</text><text class="fcs" x="930" y="108">annual + Notetaker</text></g>
+  <text class="fcl" x="5" y="24">the wedge</text><text class="fcl" x="425" y="24">the firm finds itself</text><text class="fcl" x="845" y="24">the contract</text>
+  <text class="fck" x="510" y="172">every intro comes from someone inside the firm</text>
+  </svg></div>
+  <div class="logic" style="margin-top:22px">
+    <div class="row"><span class="no">TARGET</span><span class="tx"><b>The top tier first:</b> Cyril Amarchand, Shardul Amarchand, AZB, Khaitan, Trilegal, JSA and Luthra, thousands of fee-earners between them. <b>Cyril Amarchand announced an AI-first future in January 2025</b>, widely reported as the first Indian firm to do so, and put Harvey and Lucio in front of its lawyers, so the budget and the intent are both already there. Then <b>in-house legal at the NIFTY-100</b>, where general counsel offices hold real budgets and buy narrower tools than an engineering suite, and <b>the legal-process outsourcers</b>, where documentation is the entire business. Inside a firm the buyer is the managing partner, the knowledge-management head or the general counsel, and the champion is the associate already using Flow.</span></div>
+    <div class="row"><span class="no">OUTREACH</span><span class="tx"><b>The intro comes from a person, on WhatsApp or in chambers.</b> In India a professional conversation starts where the profession already talks, and for the bar that is WhatsApp and the corridor outside court. A warm introduction from an associate the partner already trusts simply carries further here than the same words in an inbox. Two things move a partner: which peer firms already use it, and what happens to privileged content. So the one-page case carries both, with zero data retention stated plainly. Pricing is a rupee per-seat annual after a pilot, never a card up front. And the junior associate who opened the door is protected, because the case is made by the usage report rather than by them.</span></div>
+    <div class="row"><span class="no">PROOF</span><span class="tx"><b>On day 30 the managing partner gets his own firm&rsquo;s usage report next to the quote.</b> Words dictated, hours recovered, who is using it. The firm closes itself on its own numbers, and it sits in the same ledger as every creator line, priced the same way and read on the same screen.</span></div>
+  </div>
+</section>
+
+
+<footer>WISPR INDIA GTM · ARNAV MAKKAR · AUG 2026</footer>
+
+</div>
+
+<div id="bptip"></div>
+
+<script>
+(function(){
+  "use strict";
+  var ICON={light:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.6"/><path d="M12 2.6v2.4M12 19v2.4M2.6 12H5M19 12h2.4M5.4 5.4l1.7 1.7M16.9 16.9l1.7 1.7M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7"/></svg>',
+    dark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.5 8.5 0 1 0 10.2 10.2z"/></svg>'};
+  var LABEL={light:"Switch to dark theme",dark:"Switch to light theme"};
+  var mode=null;
+  try{mode=localStorage.getItem("theme")}catch(e){}
+  if(mode!=="light"&&mode!=="dark"){
+    mode=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";
+  }
+  document.documentElement.setAttribute("data-theme",mode);
+  var tbtn=document.getElementById("themebtn");
+  function paintBtn(){tbtn.innerHTML=ICON[mode];tbtn.title=LABEL[mode];tbtn.setAttribute("aria-label",LABEL[mode])}
+  paintBtn();
+  tbtn.addEventListener("click",function(){
+    mode=mode==="dark"?"light":"dark";
+    document.documentElement.setAttribute("data-theme",mode);
+    try{localStorage.setItem("theme",mode)}catch(e){}
+    paintBtn();
+    drawChart();
+  });
+
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll(".topnav a"));
+  var secs=["s1","s2","s3"].map(function(id){return document.getElementById(id)});
+  function spy(){
+    var y=window.scrollY+130,cur=0;
+    secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+    navLinks.forEach(function(a,i){a.classList.toggle("on",i===cur)});
+  }
+  addEventListener("scroll",spy,{passive:true});spy();
+
+  function cssVar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  var seed=20260828;
+  function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+  var rnd=mulberry32(seed);
+  function gauss(){var u=0,v=0;while(u===0)u=rnd();while(v===0)v=rnd();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+  function gammaSample(alpha,beta){if(alpha<1){var u=rnd();return gammaSample(alpha+1,beta)*Math.pow(u,1/alpha)}
+    var d=alpha-1/3,c=1/Math.sqrt(9*d);
+    for(;;){var x,v;do{x=gauss();v=1+c*x}while(v<=0);v=v*v*v;var u2=rnd();
+      if(u2<1-0.0331*x*x*x*x)return d*v/beta;
+      if(Math.log(u2)<0.5*x*x+d*(1-v+Math.log(v)))return d*v/beta;}}
+  function poisson(l){if(l<=0)return 0;if(l>30)return Math.max(0,Math.round(l+Math.sqrt(l)*gauss()));
+    var L=Math.exp(-l),k=0,p=1;do{k++;p*=rnd()}while(p>L);return k-1}
+
+  var PERS=["builders","students","finance","homemakers","regional","enthusiasts"];
+  var CHAN=["YouTube","Instagram","X","WhatsApp"];
+  var N=24,DAYS=90,DAILY=2500000/30;
+  var SPREAD={narrow:[52,34],mid:[18,140],wide:[12,300]},spreadKey="mid",fatigue=true;
+  var cells,day,run=false,fast=true,timer=null,bandit,base,histB,histE,events;
+
+  function $(id){return document.getElementById(id)}
+  function newMarket(){
+    rnd=mulberry32(seed);
+    cells=[];
+    for(var p=0;p<6;p++)for(var c=0;c<4;c++){
+      var sp=SPREAD[spreadKey];
+      var cpi=sp[0]+sp[1]*Math.pow(rnd(),1.3);
+      cells.push({name:PERS[p]+" on "+CHAN[c],cpi0:cpi,cpi:cpi,cum:0,cpiE:cpi,cumE:0,alpha:1,beta:40,hot:0,scaled:false,killed:false});
+    }
+    day=0;bandit={inst:0,spend:0};base={inst:0,spend:0};histB=[0];histE=[0];events=[];
+    updateUI();drawChart();drawStrip(new Array(N).fill(1/N));renderTape();
+  }
+  function pushEvent(kind,name){
+    events.push({d:day,k:kind,n:name});
+    var sc=events.filter(function(e){return e.k==="SCALE"}).slice(-2);
+    var kl=events.filter(function(e){return e.k==="KILL"}).slice(-2);
+    events=sc.concat(kl).sort(function(a,b){return a.d-b.d});
+    renderTape();
+  }
+  function renderTape(){
+    var t=$("tape");
+    if(!events.length){t.innerHTML='<span class="ev" style="color:var(--ink-3)">No moves yet. The allocator is still gathering evidence.</span>';return}
+    t.innerHTML=events.map(function(e){
+      var cls=e.k==="SCALE"?"s":"x";
+      var w=e.k==="SCALE"?"scaled up":"moved off";
+      return '<span class="ev">Day '+e.d+' · <span class="k '+cls+'">'+w+'</span> '+e.n+'</span>';
+    }).join("");
+  }
+  function step(){
+    if(day>=DAYS){setRun(false);return}
+    day++;
+    var fat=fatigue;
+    var draws=cells.map(function(c){return gammaSample(c.alpha,c.beta)});
+    var order=draws.map(function(d,i){return i}).sort(function(a,b){return draws[b]-draws[a]});
+    var alloc=new Array(N).fill(DAILY*0.20/N);
+    var topK=5,sumTop=0,i;
+    for(i=0;i<topK;i++)sumTop+=draws[order[i]];
+    for(i=0;i<topK;i++)alloc[order[i]]+=DAILY*0.80*draws[order[i]]/sumTop;
+    var shares=new Array(N);
+    var means=cells.map(function(c){return c.alpha/c.beta}).sort(function(a,b){return a-b});
+    var med=means[12];
+    cells.forEach(function(c,idx){
+      var r=1/c.cpi;
+      var inst=poisson(alloc[idx]*r);
+      bandit.inst+=inst;bandit.spend+=alloc[idx];
+      c.alpha=1+(c.alpha-1)*0.985+inst;
+      c.beta=c.beta*0.985+alloc[idx];
+      var iE=poisson((DAILY/N)*(1/c.cpiE));
+      base.inst+=iE;base.spend+=DAILY/N;
+      c.cum+=alloc[idx];c.cumE+=DAILY/N;
+      if(fat){var sat=Math.min(0.6,(c.cum/600000)*0.35);c.cpi=c.cpi0*(1+sat);var satE=Math.min(0.6,(c.cumE/600000)*0.35);c.cpiE=c.cpi0*(1+satE)}
+      shares[idx]=alloc[idx]/DAILY;
+      if(shares[idx]>2.2/N){c.hot++}else{c.hot=0}
+      if(!c.scaled&&c.hot>=2&&day>6){c.scaled=true;pushEvent("SCALE",c.name)}
+      if(!c.killed&&day>10&&c.cum>30000&&(c.alpha/c.beta)<0.5*med){c.killed=true;pushEvent("KILL",c.name)}
+    });
+    histB.push(bandit.inst);histE.push(base.inst);
+    updateUI();drawChart();drawStrip(shares);
+  }
+  function fmt(n){if(n>=1000000)return (n/1000000).toFixed(2)+"M";if(n>=1000)return Math.round(n/1000)+"K";return Math.round(n)}
+  function updateUI(){
+    $("sDay").textContent=day;
+    $("sBandit").textContent=base.inst?Math.round(bandit.inst/base.inst*100):"·";
+    var cb=bandit.inst?bandit.spend/bandit.inst:0, ce=base.inst?base.spend/base.inst:0;
+    $("sBcpi").textContent=(cb&&ce)?((cb/ce).toFixed(2)+"×"):"·";
+    var lift=base.inst?((bandit.inst-base.inst)/base.inst*100):0;
+    $("sLift").textContent=(lift>=0?"+":"")+lift.toFixed(0)+"%";
+  }
+  var cv=$("chart"),ctx=cv.getContext("2d");
+  function hexToRgba(h,a){
+    h=h.replace("#","");
+    if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var n=parseInt(h,16);
+    return "rgba("+(n>>16&255)+","+(n>>8&255)+","+(n&255)+","+a+")";
+  }
+  function drawChart(){
+    var ACC=cssVar("--accent")||"#5B5FBF", MUT=cssVar("--ink-3")||"#8C857A",
+        LINE=cssVar("--line-2")||"rgba(0,0,0,.2)", GRID=cssVar("--line")||"rgba(0,0,0,.1)";
+    var W=cv.width,H=cv.height,pad=30,R=152;
+    ctx.clearRect(0,0,W,H);
+    var maxY=Math.max(10,histB[histB.length-1],histE[histE.length-1])*1.15;
+    function xy(d,v){return[pad+(W-pad-R)*(d/DAYS),(H-34)-(H-56)*(v/maxY)]}
+    ctx.font="19px JetBrains Mono,ui-monospace,monospace";ctx.textAlign="left";
+    for(var g=1;g<=3;g++){var vv=maxY*g/4,gy=xy(0,vv)[1];
+      ctx.strokeStyle=GRID;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(pad,gy);ctx.lineTo(W-R+2,gy);ctx.stroke();
+      ctx.fillStyle=MUT;ctx.fillText(histE[histE.length-1]?Math.round(vv/histE[histE.length-1]*100):"",4,gy+6);}
+    ctx.strokeStyle=LINE;ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(pad,10);ctx.lineTo(pad,H-34);ctx.lineTo(W-R+2,H-34);ctx.stroke();
+    ctx.fillStyle=MUT;ctx.fillText("day 0",pad,H-10);
+    ctx.textAlign="right";ctx.fillText("day 90",W-R+2,H-10);ctx.textAlign="left";
+    var px=xy(12,0)[0];
+    ctx.strokeStyle=LINE;ctx.setLineDash([6,7]);ctx.beginPath();ctx.moveTo(px,16);ctx.lineTo(px,H-34);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=MUT;ctx.fillText("testing wide",pad+10,32);ctx.fillText("→ backing the winners",px+10,32);
+    if(histB.length>1){
+      ctx.beginPath();
+      for(var d=0;d<histB.length;d++){var pt=xy(d,histB[d]);d?ctx.lineTo(pt[0],pt[1]):ctx.moveTo(pt[0],pt[1]);}
+      for(d=histE.length-1;d>=0;d--){var q=xy(d,histE[d]);ctx.lineTo(q[0],q[1]);}
+      ctx.closePath();ctx.fillStyle=hexToRgba(ACC,0.13);ctx.fill();
+    }
+    function line(hist,color){ctx.strokeStyle=color;ctx.lineWidth=4;ctx.beginPath();
+      for(var d2=0;d2<hist.length;d2++){var p2=xy(d2,hist[d2]);d2?ctx.lineTo(p2[0],p2[1]):ctx.moveTo(p2[0],p2[1])}
+      ctx.stroke();}
+    line(histE,MUT);line(histB,ACC);
+    var last=histB.length-1;
+    if(last>0){
+      var pB=xy(last,histB[last]),pE=xy(last,histE[last]);
+      ctx.font="600 21px JetBrains Mono,ui-monospace,monospace";
+      ctx.fillStyle=ACC;ctx.fillText("APERTURE",pB[0]+10,pB[1]+7);
+      ctx.fillStyle=MUT;ctx.fillText("equal split",pE[0]+10,pE[1]+7);
+      var lift=base.inst?((bandit.inst-base.inst)/base.inst*100):0;
+      if(lift>2&&(pE[1]-pB[1])>34){ctx.font="600 28px JetBrains Mono,ui-monospace,monospace";ctx.fillStyle=ACC;ctx.textAlign="right";
+        ctx.fillText("+"+lift.toFixed(0)+"% edge",pB[0]-12,(pB[1]+pE[1])/2+9);ctx.textAlign="left";}
+    }
+  }
+  function drawStrip(shares){
+    var s=$("strip");
+    if(!s.children.length){for(var i=0;i<N;i++){var b=document.createElement("div");b.className="bar";b.title=cells[i].name;s.appendChild(b)}}
+    var mx=Math.max.apply(null,shares);
+    for(var i=0;i<N;i++){var b=s.children[i];b.style.height=Math.max(3,(shares[i]/mx)*48)+"px";b.className="bar"+(shares[i]>1.5/N?" hot":"")}
+  }
+  function setRun(r){run=r;$("run").textContent=r?"❚❚ pause":"▶ run";
+    if(timer){clearInterval(timer);timer=null}
+    if(r){timer=setInterval(step,fast?140:1000)}}
+  $("run").addEventListener("click",function(){if(day>=DAYS){newMarket()}setRun(!run)});
+  $("reset").addEventListener("click",function(){setRun(false);newMarket()});
+  function pick(sel,el){Array.prototype.forEach.call(document.querySelectorAll(sel),function(b){b.classList.toggle("primary",b===el)})}
+  Array.prototype.forEach.call(document.querySelectorAll("button.sp"),function(b){
+    b.addEventListener("click",function(){spreadKey=b.getAttribute("data-sp");pick("button.sp",b);setRun(false);newMarket();setRun(true)})});
+  Array.prototype.forEach.call(document.querySelectorAll("button.ft"),function(b){
+    b.addEventListener("click",function(){fatigue=b.getAttribute("data-ft")==="1";pick("button.ft",b);setRun(false);newMarket();setRun(true)})});
+  $("speed").addEventListener("click",function(){fast=!fast;this.textContent=fast?"7×":"1×";if(run){setRun(false);setRun(true)}});
+  newMarket();
+  var simSeen=false;
+  var RM=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  new IntersectionObserver(function(es,obs){es.forEach(function(e){if(e.isIntersecting&&!simSeen){simSeen=true;if(!RM)setRun(true);obs.disconnect()}})},{threshold:.3}).observe(document.querySelector(".panel"));
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var BP_INFO={"al": {"t": "The brain", "body": "The only part that decides on its own. It reads the ledger and reallocates the money on a cadence the operator sets: daily by default, hourly in a launch week, slower when things are quiet. The dial belongs to a person; the discipline is automatic. Putting more behind a line means running it again, extending the format, taking it to the next audience. Pulling back means the line stops taking spend and that budget returns to the pool. A fifth of the money always goes to lines it is still unsure about, and nothing crosses a cap without a person.", "io": "IN: the ledger, every cycle · OUT: budget changes + the morning report", "tools": "A running estimate per line, updated nightly"}, "gates": {"t": "Human gates", "body": "People decide the big moves. Anything above a spend cap, any new channel, any new kind of deal stops here. Weekly, humans set concepts, creator deals and ceilings. The engine can only move money inside the box people drew.", "io": "IN: requests above caps · OUT: yes/no, new ceilings", "tools": "Weekly council · approval queue"}, "buy": {"t": "Buy", "body": "Executes the morning's budget changes on Meta and Google through their APIs, capped per action. It buys two things: normal brand creative, and the creator posts that already proved cheap organically, re-run as paid from the creator's own handle.", "io": "IN: today's allocations + whitelisted winners · OUT: live campaigns, spend receipts", "tools": "Meta Marketing API · Google Ads API"}, "scout": {"t": "Scout", "body": "Nobody browses Instagram looking for creators here. Scouts crawl public creator data nightly, score every candidate on expected cost per thousand views using what the ledger already learned about similar audiences, and keep a ranked shortlist warm for each persona. A person approves the shortlist before a single message goes out, so judgment stays human and the searching does not.", "io": "IN: public creator data + ledger history · OUT: ranked shortlist, then a human yes or no", "tools": "A nightly Deepline routine, then batch approval"}, "produce": {"t": "Produce", "body": "Drafts creator briefs, message variants, and those small replies from what's already proven. A person approves every batch. Approved work sits ready to go, so a tired ad or a hot thread never waits on someone to write something.", "io": "IN: winning messages + scout's list + monitored threads · OUT: approved briefs, variants, replies", "tools": "A Deepline routine, then human approval"}, "partner": {"t": "Partner", "body": "Prepares the moves a machine shouldn't make alone: barter offers, firm pilots, campus partnerships. The system drafts the offer and picks the moment; a person sends it and signs it.", "io": "IN: hot accounts + shortlists · OUT: sent intros, signed deals", "tools": "A Deepline routine, then a human sender"}, "audit": {"t": "Audit", "body": "Adversarial by design: its job is to fail ads. Is the paid partnership disclosed, prominently and in the post itself rather than a bio or a hashtag? Does it sit inside the ASCI code? ASCI is self-regulatory rather than statutory, but its influencer guidelines have been the industry standard since 2021 and its AI-labelling rules are being written now, and brands are held to them in practice. Is it on brand voice? Only what passes ships. This is what keeps scale from becoming slop.", "io": "IN: everything about to ship · OUT: pass / fail with reasons", "tools": "A checklist routine, with human review on fails"}, "meta": {"t": "Meta ads", "body": "Since Meta's Andromeda update, manual audience targeting carries much less weight: the system reads the creative itself to find the audience, so creative volume and variety are what move the result. That is why the whitelist path matters. A creator authorises the brand on their post, the brand re-runs that exact post as a partnership ad from the creator's handle, and the likes and comments carry across with it. The organic collab was the test; this is the scale-up.", "io": "IN: budget + whitelisted creator posts · OUT: installs at a price", "tools": "Meta partnership ads + their optimizer"}, "goog": {"t": "Google + YouTube ads", "body": "Same shape as Meta: their AI runs the buying, so the inputs that matter are creative and intent. A creator links their channel to the ad account and their proven video runs as a paid video campaign, alongside search intent lines like 'voice typing in Hindi'.", "io": "IN: budget + linked creator videos · OUT: installs at a price", "tools": "Linked-channel video campaigns + their optimizer"}, "ytc": {"t": "YouTube creators", "body": "Long-form trust. Every creator carries a personal promo code, so each redemption prices that creator automatically. Proven videos then run as paid video campaigns off the creator's linked channel, which is how a good collab turns into real volume.", "io": "IN: briefs + fees · OUT: views, coded installs", "tools": "Creator deals + codes"}, "igc": {"t": "Instagram creators", "body": "Where the India creator book lives. Each collab becomes one line in the ledger with its own code, so a cheap winner gets repeated and an expensive one gets caught in days instead of never. And a winner does not stop at organic reach: it gets re-run as a partnership ad, still tagged to that creator, so the boosted spend keeps its own price.", "io": "IN: briefs + fees · OUT: views, coded installs", "tools": "Creator deals + codes"}, "wa": {"t": "WhatsApp", "body": "India's real distribution layer. Forwardable units (templates, certificates, festival cards) with tracked links, so even a forward has a price.", "io": "IN: forwardable units · OUT: link-tracked installs", "tools": "Share templates + tracked links"}, "owned": {"t": "Owned pages", "body": "The brand's own shelf. Winning creator content gets amplified here so rented reach compounds into owned reach.", "io": "IN: winning content · OUT: compounding followers", "tools": "Reposts + boosts behind winners"}, "streets": {"t": "Streets", "body": "Autos, billboards, campus walls, with QR codes so even offline has a line in the ledger. The Bengaluru auto campaign proved this works; the ledger makes it repeatable.", "io": "IN: creative + inventory · OUT: QR-tracked installs", "tools": "QR per placement"}, "b2b": {"t": "Firms · the channel nobody buys", "body": "Professionals carry the tool into work themselves, and wherever a share or referral surface exists it travels the same route. The first visible sign is always the same: several people signing up from one company domain. Nothing here is bought. The system's job is to notice where it is already landing and hand that to a person.", "io": "IN: users at work · OUT: firm-domain signals", "tools": "Signup domains + whatever share surfaces exist"}, "adapi": {"t": "Ad APIs", "body": "Spend and conversions pulled nightly from Meta and Google, per campaign, straight into the ledger.", "io": "IN: platform reports · OUT: ledger rows for paid", "tools": "Marketing APIs, pulled nightly"}, "codes": {"t": "Promo codes", "body": "The fallback receipt, for everywhere a link cannot travel: streets, print, podcasts, spoken mentions. One code per creator, worth a real discount, and every redemption prices that creator exactly. The global YouTube program runs this and exactly one India reel does (@gayatri.tech, GAYATRIFLOWS). A code costs the viewer a step of typing, so links come first and codes cover the rest.", "io": "IN: redemptions · OUT: installs per creator", "tools": "Checkout codes, where a link cannot reach"}, "links": {"t": "Tracked links", "body": "The primary receipt, and the one the book is missing today: one tracked link per collab instead of one bio link for all of them, and it survives the trip through the app store, so the tap that started it is still known after install. The viewer taps, the offer is already applied, the install attributes itself, and nothing has to be typed or remembered. On Instagram the link rides in the creator's bio for the campaign window, in a Story sticker, or on the boosted version of the post. It runs on rails Wispr already owns: the affiliate programme's per-link tracking and the referral-code system, plus a mobile measurement partner, so installs and payers are known per line rather than per month.", "io": "IN: clicks · OUT: installs + payers per line", "tools": "A mobile measurement partner (AppsFlyer, Branch) plus disciplined link tagging"}, "domains": {"t": "Signup domains", "body": "Work-email signups and footer referrals reveal which firms are lighting up. Five active people on one domain means a warm account, surfaced by the system instead of assembled by hand.", "io": "IN: signups + referrals · OUT: hot firm accounts", "tools": "A Deepline enrichment routine"}, "ledger": {"t": "The ledger", "body": "One row per line of spend: money out, views, installs, paying users, updated nightly. This is the table that does not exist today, which is why the cheapest and the most expensive creator work currently look identical. The entire system above exists to fill this table and act on it every morning.", "io": "IN: all four receipt streams · OUT: the brain's next read", "tools": "A database and discipline"}, "threads": {"t": "Threads · thousands of small bets", "body": "The side of the book nobody staffs: honest replies and answers where typing pain is already being discussed. X, Reddit, Quora, Discord, comment sections. Each reply costs almost nothing, carries disclosure, and is personal to a small audience. A human team caps out around twenty live positions; agents drafting and a person approving in batches can hold a thousand.", "io": "IN: monitored threads + approved drafts · OUT: answers, cohort-level lift", "tools": "A listening routine, owned accounts, batch approval and disclosure"}, "council": {"t": "Weekly council", "body": "Where people decide. Once a week, humans set new concepts, sign creator deals, approve briefs into the ready pile and review every spend ceiling. The engine can only move money inside the box drawn here, so creativity and judgment stay human while the machine takes the volume.", "io": "IN: last week's ledger + proposals · OUT: approved concepts, deals, ceilings", "tools": "A meeting, an agenda, and the allocation reports"}};
+var BP_LIGHTS={"council": ["e-al-buy", "e-al-partner", "e-al-produce", "e-al-scout", "e-council-al"], "al": ["e-adapi-led", "e-al-buy", "e-al-partner", "e-al-produce", "e-al-scout", "e-b2b-domains", "e-buy-goog", "e-buy-meta", "e-codes-led", "e-council-al", "e-domains-led", "e-gates-al", "e-goog-adapi", "e-igc-codes", "e-igc-meta", "e-led-al", "e-links-led", "e-meta-adapi", "e-owned-links", "e-partner-b2b", "e-produce-igc", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-produce-ytc", "e-scout-prod", "e-streets-links", "e-threads-links", "e-wa-links", "e-ytc-codes", "e-ytc-goog"], "gates": ["e-al-buy", "e-al-partner", "e-al-produce", "e-al-scout", "e-gates-al"], "audit": ["e-buy-goog", "e-buy-meta", "e-igc-meta", "e-partner-b2b", "e-produce-igc", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-produce-ytc", "e-ytc-goog"], "ledger": ["e-adapi-led", "e-al-buy", "e-al-partner", "e-al-produce", "e-b2b-domains", "e-buy-goog", "e-buy-meta", "e-codes-led", "e-domains-led", "e-goog-adapi", "e-igc-codes", "e-led-al", "e-links-led", "e-meta-adapi", "e-owned-links", "e-partner-b2b", "e-produce-igc", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-produce-ytc", "e-streets-links", "e-threads-links", "e-wa-links", "e-ytc-codes"], "buy": ["e-adapi-led", "e-al-buy", "e-buy-goog", "e-buy-meta", "e-goog-adapi", "e-igc-meta", "e-led-al", "e-meta-adapi", "e-ytc-goog"], "scout": ["e-al-produce", "e-al-scout", "e-codes-led", "e-igc-codes", "e-led-al", "e-links-led", "e-owned-links", "e-produce-igc", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-produce-ytc", "e-scout-prod", "e-streets-links", "e-threads-links", "e-wa-links", "e-ytc-codes"], "produce": ["e-al-produce", "e-codes-led", "e-igc-codes", "e-led-al", "e-links-led", "e-owned-links", "e-produce-igc", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-produce-ytc", "e-streets-links", "e-threads-links", "e-wa-links", "e-ytc-codes"], "partner": ["e-al-partner", "e-b2b-domains", "e-domains-led", "e-led-al", "e-partner-b2b"], "meta": ["e-adapi-led", "e-al-buy", "e-buy-meta", "e-igc-meta", "e-led-al", "e-meta-adapi"], "goog": ["e-adapi-led", "e-al-buy", "e-buy-goog", "e-goog-adapi", "e-led-al", "e-ytc-goog"], "ytc": ["e-al-produce", "e-codes-led", "e-led-al", "e-produce-ytc", "e-ytc-codes", "e-ytc-goog"], "igc": ["e-al-produce", "e-codes-led", "e-igc-codes", "e-igc-meta", "e-led-al", "e-produce-igc"], "wa": ["e-al-produce", "e-led-al", "e-links-led", "e-produce-wa", "e-wa-links"], "owned": ["e-al-produce", "e-led-al", "e-links-led", "e-owned-links", "e-produce-owned"], "streets": ["e-al-produce", "e-led-al", "e-links-led", "e-produce-streets", "e-streets-links"], "threads": ["e-al-produce", "e-led-al", "e-links-led", "e-produce-threads", "e-threads-links"], "b2b": ["e-al-partner", "e-b2b-domains", "e-domains-led", "e-led-al", "e-partner-b2b"], "adapi": ["e-adapi-led", "e-al-buy", "e-buy-goog", "e-buy-meta", "e-goog-adapi", "e-led-al", "e-meta-adapi"], "codes": ["e-al-produce", "e-codes-led", "e-igc-codes", "e-led-al", "e-produce-igc", "e-produce-ytc", "e-ytc-codes"], "links": ["e-al-produce", "e-led-al", "e-links-led", "e-owned-links", "e-produce-owned", "e-produce-streets", "e-produce-threads", "e-produce-wa", "e-streets-links", "e-threads-links", "e-wa-links"], "domains": ["e-al-partner", "e-b2b-domains", "e-domains-led", "e-led-al", "e-partner-b2b"]};
+  var EDGE_ENDS = {"e-council-al": ["council", "al"], "e-gates-al": ["gates", "al"], "e-scout-prod": ["scout", "produce"], "e-led-al": ["ledger", "al"], "e-al-buy": ["al", "buy"], "e-al-scout": ["al", "scout"], "e-al-produce": ["al", "produce"], "e-al-partner": ["al", "partner"], "e-buy-meta": ["buy", "meta"], "e-buy-goog": ["buy", "goog"], "e-produce-ytc": ["produce", "ytc"], "e-produce-igc": ["produce", "igc"], "e-produce-wa": ["produce", "wa"], "e-produce-owned": ["produce", "owned"], "e-produce-streets": ["produce", "streets"], "e-produce-threads": ["produce", "threads"], "e-partner-b2b": ["partner", "b2b"], "e-meta-adapi": ["meta", "adapi"], "e-goog-adapi": ["goog", "adapi"], "e-ytc-codes": ["ytc", "codes"], "e-igc-codes": ["igc", "codes"], "e-wa-links": ["wa", "links"], "e-owned-links": ["owned", "links"], "e-streets-links": ["streets", "links"], "e-threads-links": ["threads", "links"], "e-b2b-domains": ["b2b", "domains"], "e-adapi-led": ["adapi", "ledger"], "e-codes-led": ["codes", "ledger"], "e-links-led": ["links", "ledger"], "e-domains-led": ["domains", "ledger"], "e-igc-meta": ["igc", "meta"], "e-ytc-goog": ["ytc", "goog"]};
+  var svg=document.getElementById('bp'); if(!svg) return;
+  var tip=document.getElementById('bptip'), panel=document.getElementById('bpd');
+  var nodes=Array.prototype.slice.call(svg.querySelectorAll('.dnode'));
+  var sel=null;
+  var DEFAULT='<span class="t">The blueprint</span><div class="b">Click any block to trace the path money takes through it, and read what it does in plain words: what goes in, what comes out, and which tools run it.</div>';
+
+  function nodesOf(edges){var s={};edges.forEach(function(e){(EDGE_ENDS[e]||[]).forEach(function(n){s[n]=1});});return s;}
+  function clear(){
+    sel=null; svg.classList.remove('focus');
+    nodes.forEach(function(n){n.classList.remove('on');n.classList.remove('sel')});
+    Array.prototype.forEach.call(svg.querySelectorAll('.dedge.lit'),function(e){e.classList.remove('lit')});
+    panel.classList.remove('active'); panel.innerHTML=DEFAULT;
+  }
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function select(key,el){
+    if(sel===key){clear();return;}
+    clear(); sel=key;
+    var lit=BP_LIGHTS[key]||[];
+    svg.classList.add('focus');
+    lit.forEach(function(id){var e=document.getElementById(id); if(e) e.classList.add('lit');});
+    var on=nodesOf(lit); on[key]=1;
+    nodes.forEach(function(n){ if(on[n.getAttribute('data-n')]) n.classList.add('on'); });
+    el.classList.add('sel'); el.classList.add('on');
+    var i=BP_INFO[key]; if(!i) return;
+    var chips='';
+    String(i.io||'').split('·').forEach(function(part){
+      part=part.trim(); if(!part) return;
+      var m=part.match(/^(IN|OUT):\s*(.*)$/i);
+      chips += m ? '<span class="chip"><b>'+esc(m[1].toUpperCase())+'</b> '+esc(m[2])+'</span>'
+                 : '<span class="chip">'+esc(part)+'</span>';
+    });
+    if(i.tools) chips += '<span class="chip"><b>RUNS ON</b> '+esc(i.tools)+'</span>';
+    panel.classList.add('active');
+    panel.innerHTML='<span class="esc">esc to clear</span><span class="t">'+esc(i.t)+'</span>'
+      +'<div class="b">'+esc(i.body)+'</div>'
+      +'<div class="meta">'+chips+'</div>'
+      +('');
+  }
+  function showTip(key,x,y){
+    var i=BP_INFO[key]; if(!i) return;
+    tip.innerHTML='<div class="tt">'+esc(i.t)+'</div>'+esc(String(i.body).split('. ')[0])+'.';
+    tip.classList.add('show');
+    var w=tip.offsetWidth||280, h=tip.offsetHeight||60;
+    tip.style.left=Math.max(10,Math.min(x+16,window.innerWidth-w-12))+'px';
+    tip.style.top=(y+18+h>window.innerHeight?y-h-14:y+18)+'px';
+  }
+  function hideTip(){tip.classList.remove('show');}
+
+  nodes.forEach(function(n,idx){
+    var key=n.getAttribute('data-n');
+    n.addEventListener('click',function(ev){ev.stopPropagation();select(key,n);});
+    n.addEventListener('mousemove',function(ev){showTip(key,ev.clientX,ev.clientY);});
+    n.addEventListener('mouseleave',hideTip);
+    n.addEventListener('focus',function(){var r=n.getBoundingClientRect();showTip(key,r.left+r.width/2-140,r.bottom-10);});
+    n.addEventListener('blur',hideTip);
+    n.addEventListener('keydown',function(ev){
+      if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(key,n);}
+      else if(ev.key==='ArrowRight'||ev.key==='ArrowDown'){ev.preventDefault();nodes[(idx+1)%nodes.length].focus();}
+      else if(ev.key==='ArrowLeft'||ev.key==='ArrowUp'){ev.preventDefault();nodes[(idx-1+nodes.length)%nodes.length].focus();}
+    });
+  });
+  svg.addEventListener('click',function(){clear();hideTip();});
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&sel){clear();hideTip();}});
+  panel.innerHTML=DEFAULT;
+})();
+</script>
+
+<script>
+(function(){var n=document.querySelector('.navwrap');if(!n)return;
+ var f=function(){n.classList.toggle('stuck',window.scrollY>4)};
+ f();addEventListener('scroll',f,{passive:true});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Working files. These must never reach the repo, public or private.
+HANDOFF.md
+RECON.md
+AUDIT.md
+GTM-PROPOSAL.md
+SWARM-PLAN.md
+creator-ledger.html
+flowdesk-spec.html
+think-school-transcript.md
+clay-physics-notes.md
+pitch-video-script*.md
+exposure-desk-pitch.html
+*.mov
+*.mp4
+*.zip
+
+.DS_Store
+.vercel
+node_modules/
